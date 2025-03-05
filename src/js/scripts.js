@@ -1,0 +1,6 @@
+$(function() {
+
+    //= components/accordion
+    
+
+});
