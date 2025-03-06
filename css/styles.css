@@ -322,7 +322,7 @@ input[type='submit'] {
 
 .header__bottom {
   height: 30px;
-  background: #E479BD url(../img/header-bottom-bg.jpg) repeat-x -50% center;
+  background: #E479BD url(../img/header-bottom-bg.svg) repeat-x -50% center;
 }
 
 .page {
