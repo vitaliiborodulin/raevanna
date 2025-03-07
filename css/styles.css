@@ -236,6 +236,10 @@ input[type="number"] {
   color: #1E1E1E;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   font-family: 'Geologica', sans-serif;
@@ -246,7 +250,6 @@ body {
   color: #1E1E1E;
   background-color: #F6F6F6;
   min-width: 320px;
-  scroll-behavior: smooth;
 }
 
 main {
