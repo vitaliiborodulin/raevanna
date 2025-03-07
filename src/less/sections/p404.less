@@ -1,0 +1,45 @@
+.p404 {
+
+    &__h1 {
+        margin-top: 0;
+        margin-bottom: 48px;
+        color: @white;
+        .md(margin-top, 0px);
+        .xs(margin-bottom, 24px);
+    }
+
+    &__banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 32px;
+        padding: 50px;
+        min-height: 400px;
+        background: @accent url(../img/p404-bg.jpg) no-repeat center/cover;
+        border-radius: 20px;
+
+        .md-block({
+            margin-top: 20px;
+            padding: 15px;
+        });
+
+        .xs-block({
+            min-height: 300px;
+        });
+    }
+
+    &__btns {
+        text-align: center;
+        
+        .btn {
+            margin: 10px;
+            display: inline-block;
+
+            .xs-block({
+                margin: 5px;
+            });
+        }
+    }
+}

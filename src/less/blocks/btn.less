@@ -1,0 +1,45 @@
+.btn {
+    padding: 16px 60px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 20px;
+    text-align: center;
+
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    .xs-block({
+        padding: 16px 39px;
+    });
+}
+
+.btn-alt {
+    color: @accent;
+    background-color: @pink-2;
+    border: 1px solid @pink-2;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: @white;
+        background-color: @accent;
+    }
+}
+
+
+.btn-up {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 0;
+    background: @accent url(../img/arrow-down.svg) no-repeat center;
+    transform: rotate(180deg);
+    transition: background-color 0.5s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @pink-2;
+    }
+}

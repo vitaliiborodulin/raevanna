@@ -1,9 +1,9 @@
 module.exports = {
 	columns: 12,
-	offset: "10px",
+	offset: "20px",
 	container: {
-		maxWidth: "1680px",
-		fields: "40px" // Внимание! fields обязан быть >= offset / 2
+		maxWidth: "1630px",
+		fields: "15px" // Внимание! fields обязан быть >= offset / 2
 	},
 	breakPoints: {
 		// xl: {
@@ -18,7 +18,7 @@ module.exports = {
 		},
 		xs: {
 			width: "576px",
-			fields: "15px"
+			// fields: "15px"
 		},
 	}
 }
