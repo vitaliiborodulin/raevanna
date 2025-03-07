@@ -286,6 +286,29 @@ input[type='submit'] {
   }
 }
 
+.btn {
+  padding: 16px 60px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btn-alt {
+  color: #E479BD;
+  background-color: #F9CDE9;
+  border: 1px solid #F9CDE9;
+}
+
+.btn-alt:hover,
+.btn-alt:active,
+.btn-alt:focus {
+  color: #fff;
+  background-color: #E479BD;
+}
+
 .btn-up {
   display: block;
   width: 32px;
@@ -318,6 +341,11 @@ input[type='submit'] {
 .bx-breadcrumb-item {
   display: inline-block;
   color: #1E1E1E;
+  transition: color 0.5s ease;
+}
+
+.bx-breadcrumb-item:hover {
+  color: #E479BD;
 }
 
 .bx-breadcrumb-item:last-child {
@@ -356,10 +384,6 @@ input[type='submit'] {
 .page__text {
   font-size: 14px;
   color: rgba(30, 30, 30, 0.6);
-}
-
-.privacy {
-  padding-bottom: 140px;
 }
 
 .faq .accordion__item {
@@ -410,6 +434,33 @@ input[type='submit'] {
   padding: 18px 0;
   font-size: 14px;
   opacity: 0.6;
+}
+
+.p404__h1 {
+  margin-top: 0;
+  margin-bottom: 48px;
+  color: #fff;
+}
+
+.p404__banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  padding: 50px;
+  min-height: 400px;
+  background: #E479BD url(../img/p404-bg.jpg) no-repeat center / cover;
+  border-radius: 20px;
+}
+
+.p404__btns {
+  text-align: center;
+}
+
+.p404__btns .btn {
+  margin: 10px;
+  display: inline-block;
 }
 
 .footer {
@@ -556,16 +607,21 @@ input[type='submit'] {
     font-size: 36px;
   }
 
-  .privacy {
-    padding-bottom: 100px;
-  }
-
   .faq .accordion__header {
     padding: 14px 0;
   }
 
   .faq .accordion__body {
     padding: 14px 0;
+  }
+
+  .p404__h1 {
+    margin-top: 0px;
+  }
+
+  .p404__banner {
+    margin-top: 20px;
+    padding: 15px;
   }
 
   .footer__top {
@@ -608,6 +664,10 @@ input[type='submit'] {
 }
 
 @media screen and (max-width: 576px) {
+  .btn {
+    padding: 16px 39px;
+  }
+
   .page {
     padding-bottom: 50px;
   }
@@ -617,12 +677,20 @@ input[type='submit'] {
     font-size: 24px;
   }
 
-  .privacy {
-    padding-bottom: 50px;
-  }
-
   .faq .accordion__header {
     font-size: 18px;
+  }
+
+  .p404__h1 {
+    margin-bottom: 24px;
+  }
+
+  .p404__banner {
+    min-height: 300px;
+  }
+
+  .p404__btns .btn {
+    margin: 5px;
   }
 
   .footer__box {
