@@ -39,6 +39,17 @@ $(function() {
     $('.card__image').on('mouseenter', '.slick-dots button', function(event) {
         $(this).parents('.card__image').slick('slickGoTo', $(this).parent().index());
     });
+    $('[data-fancybox]').fancybox({
+        // thumbs : { autoStart:true },
+        toolbar: "auto",
+        infobar: true,
+        smallBtn: "auto",
+        protect: true,
+        loop: true,
+        iframe : {
+            preload : false
+        }
+    });
     var arrowUpBtn = $('.btn-up');
     
     // function scrollBtn() {

@@ -540,6 +540,98 @@ input[type='submit'] {
   padding: 26px 0;
 }
 
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 242px;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__nav ul > li {
+  padding: 16px;
+}
+
+.header__nav ul > li > a {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.header .menu-item-has-children {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header .menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+
+.header .sub-menu {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  min-width: 200px;
+  background-color: #fff;
+  box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+}
+
+.header__btns {
+  display: flex;
+}
+
+.header__soc {
+  margin-right: 40px;
+}
+
+.header__soc a {
+  margin: 6px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #E479BD;
+  background-color: #F9CDE9;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.header__soc a:hover,
+.header__soc a:active,
+.header__soc a:focus {
+  color: #fff;
+  background-color: #E479BD;
+}
+
+.header__user a {
+  display: inline-block;
+}
+
+.header__user a svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header__user a:hover svg * {
+  fill: #E479BD;
+}
+
+.header__user a + a {
+  margin-left: 12px;
+}
+
 .header__bottom {
   width: 100%;
   height: 30px;
@@ -815,6 +907,26 @@ input[type='submit'] {
     margin-top: 18px;
   }
 
+  .header__top {
+    padding: 14px 0;
+  }
+
+  .header__logo {
+    max-width: 194px;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__soc {
+    display: none;
+  }
+
   .page {
     padding-bottom: 100px;
   }
@@ -912,6 +1024,19 @@ input[type='submit'] {
 
   .card__btns .btn-wish {
     border-radius: 50%;
+  }
+
+  .header__logo {
+    max-width: 146px;
+  }
+
+  .header__user a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header__user a + a {
+    margin-left: 4px;
   }
 
   .page {

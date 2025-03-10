@@ -11,6 +11,7 @@
 	<!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
     <!-- <link rel="icon" href="img/favicon.svg" type="image/svg+xml"> -->
 	 
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/styles.css?v=1">
 </head>
@@ -22,7 +23,87 @@
 	
 	        <div class="header__top">
 	            <div class="container">
-	                top
+	                <div class="header__content">
+	
+	                    <button type="button" class="header__burger">
+	                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="none">
+	                            <rect width="30" height="24" fill="#F9CDE9" rx="5"/>
+	                            <path stroke="#E479BD" d="M5 10h20M5 15h16.41"/>
+	                        </svg>
+	                    </button>
+	
+	                    <div class="header__menu">
+	                        <nav class="header__nav">
+	                            <ul>
+	                                <li class="menu-item menu-item-has-children">
+	                                    <a href="index.html">Новинки</a>
+	                                    <!-- <ul class="sub-menu">
+	                                        <li><a href="index.html">Категория 1</a></li>
+	                                        <li><a href="index.html">Категория 2</a></li>
+	                                        <li><a href="index.html">Категория 3</a></li>
+	                                        <li><a href="index.html">Категория 4</a></li>
+	                                    </ul> -->
+	                                </li>
+	                                <li class="menu-item menu-item-has-children">
+	                                    <a href="index.html">Женское</a>
+	                                    <!-- <ul class="sub-menu">
+	                                        <li><a href="index.html">Женское 1</a></li>
+	                                        <li><a href="index.html">Женское 2</a></li>
+	                                        <li><a href="index.html">Женское 3</a></li>
+	                                        <li><a href="index.html">Женское 4</a></li>
+	                                    </ul> -->
+	                                </li>
+	                                <li class="menu-item menu-item-has-children">
+	                                    <a href="index.html">SALE</a>
+	                                    <!-- <ul class="sub-menu">
+	                                        <li><a href="index.html">sale 1</a></li>
+	                                        <li><a href="index.html">sale 2</a></li>
+	                                        <li><a href="index.html">sale 3</a></li>
+	                                    </ul> -->
+	                                </li>
+	                                <li class="menu-item"><a href="about.html">О бренде</a></li>
+	                                <li class="menu-item"><a href="faq.html">Оплата и доставка</a></li>
+	                            </ul>
+	                        </nav>
+	                    </div>
+	
+	                    <div class="header__logo">
+	                        <a href="index.html"><img src="img/logo.svg" alt=""></a>
+	                    </div>
+	
+	                    <div class="header__btns">
+	
+	                        <div class="header__soc">
+	                            <a href="#" target="_blank">Telegram</a>
+	                            <a href="#" target="_blank">WhatsApp</a>
+	                            <a href="#" target="_blank">Вконтакте</a>
+	                        </div>
+	
+	                        <div class="header__user">
+	                            <a href="#" title="Личный кабинет">
+	                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	                                    <circle cx="12" cy="6" r="4" fill="#F9CDE9" stroke="#E479BD"/>
+	                                    <ellipse cx="12" cy="17" rx="7" ry="4" fill="#F9CDE9" stroke="#E479BD"/>
+	                                </svg>
+	                            </a>
+	                            <a href="javascript:;" data-fancybox data-src="#trash" title="Корзина">
+	                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	                                    <path d="M3.77645 12.5257C4.36167 9.40452 4.65428 7.84393 5.76518 6.92196C5.76518 6.92196 5.76518 6.92196 5.76518 6.92196C6.87608 6 8.46386 6 11.6394 6H12.3606C15.5362 6 17.124 6 18.2349 6.92196C18.2349 6.92196 18.2349 6.92196 18.2349 6.92196C19.3458 7.84393 19.6384 9.40452 20.2236 12.5257C21.0465 16.9146 21.458 19.1091 20.2584 20.5545C20.2584 20.5545 20.2584 20.5545 20.2584 20.5545C19.0587 22 16.826 22 12.3606 22H11.6394C7.17402 22 4.94131 22 3.74169 20.5545C3.74169 20.5545 3.74169 20.5545 3.74169 20.5545C2.54207 19.1091 2.95353 16.9146 3.77645 12.5257Z" fill="#F9CDE9"/>
+	                                    <path d="M3.74169 20.5545C4.94131 22 7.17402 22 11.6394 22H12.3606C16.826 22 19.0587 22 20.2584 20.5545M3.74169 20.5545C2.54207 19.1091 2.95353 16.9146 3.77645 12.5257C4.36167 9.40452 4.65428 7.84393 5.76518 6.92196M3.74169 20.5545C3.74169 20.5545 3.74169 20.5545 3.74169 20.5545ZM20.2584 20.5545C21.458 19.1091 21.0465 16.9146 20.2236 12.5257C19.6384 9.40452 19.3458 7.84393 18.2349 6.92196M20.2584 20.5545C20.2583 20.5545 20.2584 20.5545 20.2584 20.5545ZM18.2349 6.92196C17.124 6 15.5362 6 12.3606 6H11.6394C8.46386 6 6.87608 6 5.76518 6.92196M18.2349 6.92196C18.2349 6.92196 18.2349 6.92196 18.2349 6.92196ZM5.76518 6.92196C5.76518 6.92196 5.76518 6.92196 5.76518 6.92196Z" stroke="#E479BD"/>
+	                                    <path d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke="#E479BD" stroke-linecap="round"/>
+	                                </svg>
+	                            </a>
+	                            <a href="wish-list.html" title="Избранное">
+	                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	                                    <path d="M2 9.13734C2 14.0003 6.01943 16.5917 8.96173 18.9111C10 19.7296 11 20.5002 12 20.5002C13 20.5002 14 19.7296 15.0383 18.9111C17.9806 16.5917 22 14.0003 22 9.13734C22 4.27441 16.4998 0.825708 12 5.50088C7.50016 0.825708 2 4.27441 2 9.13734Z" fill="#F9CDE9"/>
+	                                    <path d="M8.96173 18.9111L8.65219 19.3038L8.96173 18.9111ZM12 5.50088L11.6398 5.84761C11.734 5.94554 11.8641 6.00088 12 6.00088C12.1359 6.00088 12.266 5.94554 12.3602 5.84761L12 5.50088ZM15.0383 18.9111L14.7287 18.5185L15.0383 18.9111ZM9.27127 18.5185C7.77045 17.3353 6.08543 16.1482 4.75136 14.646C3.43443 13.1631 2.5 11.4128 2.5 9.13734H1.5C1.5 11.7249 2.57528 13.7017 4.00365 15.31C5.41487 16.8991 7.21071 18.1674 8.65219 19.3038L9.27127 18.5185ZM2.5 9.13734C2.5 6.89294 3.76859 4.99783 5.52043 4.19706C7.24074 3.4107 9.5178 3.64298 11.6398 5.84761L12.3602 5.15414C9.98236 2.68361 7.25942 2.30265 5.1047 3.28758C2.98149 4.2581 1.5 6.51881 1.5 9.13734H2.5ZM8.65219 19.3038C9.16673 19.7094 9.70317 20.1289 10.243 20.4443C10.7826 20.7596 11.3731 21.0002 12 21.0002V20.0002C11.6269 20.0002 11.2174 19.8555 10.7475 19.5809C10.2777 19.3064 9.79501 18.9313 9.27127 18.5185L8.65219 19.3038ZM15.3478 19.3038C16.7893 18.1674 18.5851 16.8991 19.9964 15.31C21.4247 13.7017 22.5 11.7249 22.5 9.13734H21.5C21.5 11.4128 20.5656 13.1631 19.2486 14.646C17.9146 16.1482 16.2295 17.3353 14.7287 18.5185L15.3478 19.3038ZM22.5 9.13734C22.5 6.51881 21.0185 4.2581 18.8953 3.28758C16.7406 2.30265 14.0176 2.68361 11.6398 5.15414L12.3602 5.84761C14.4822 3.64298 16.7593 3.4107 18.4796 4.19706C20.2314 4.99783 21.5 6.89294 21.5 9.13734H22.5ZM14.7287 18.5185C14.205 18.9313 13.7223 19.3064 13.2525 19.5809C12.7826 19.8555 12.3731 20.0002 12 20.0002V21.0002C12.6269 21.0002 13.2174 20.7596 13.757 20.4443C14.2968 20.1289 14.8333 19.7094 15.3478 19.3038L14.7287 18.5185Z" fill="#E479BD"/>
+	                                </svg>                                    
+	                            </a>
+	                        </div>
+	
+	                    </div>
+	
+	                </div>
 	            </div>
 	        </div>
 	
@@ -296,9 +377,13 @@
 	    </div>
 	</footer>
 	<!-- end footer -->
+	<div style="display: none;" class="popup" id="trash">
 	
+	    корзина
+	</div>
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js?v=1"></script>
 	<!-- end scripts -->
