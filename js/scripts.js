@@ -16,6 +16,29 @@ $(function() {
             accBody.slideUp(300);
         }
     });
+    $('.card__image').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // infinite: true,
+        // speed: 500,
+        arrows: false,
+        // cssEase: 'linear',
+        dots: true,
+        fade: true,
+        autoplay: false,
+        responsive: [
+            {
+                breakpoint: 834,
+                settings: {
+                    dots: false,
+                }
+            },
+        ]
+    });
+    
+    $('.card__image').on('mouseenter', '.slick-dots button', function(event) {
+        $(this).parents('.card__image').slick('slickGoTo', $(this).parent().index());
+    });
     var arrowUpBtn = $('.btn-up');
     
     // function scrollBtn() {

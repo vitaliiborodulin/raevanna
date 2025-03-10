@@ -236,10 +236,6 @@ input[type="number"] {
   color: #1E1E1E;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   position: relative;
   font-family: 'Geologica', sans-serif;
@@ -267,6 +263,10 @@ textarea {
   field-sizing: content;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
 
 *:focus:not(:focus-visible) {
@@ -291,13 +291,23 @@ input[type='submit'] {
 }
 
 .btn {
-  padding: 16px 60px;
+  display: inline-block;
+  padding: 16px 30px;
   font-size: 14px;
   font-weight: 400;
   border-radius: 20px;
   text-align: center;
+  color: #fff;
+  background-color: #E479BD;
   transition: all 0.5s ease;
   cursor: pointer;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  color: #E479BD;
+  background-color: #F9CDE9;
 }
 
 .btn-alt {
@@ -311,6 +321,28 @@ input[type='submit'] {
 .btn-alt:focus {
   color: #fff;
   background-color: #E479BD;
+}
+
+.btn-wish {
+  display: inline-block;
+  padding: 13px;
+  border-radius: 20px;
+  font-size: 0;
+  background-color: #F9CDE9;
+  transition: background-color 0.5s ease;
+  text-align: center;
+}
+
+.btn-wish:hover,
+.btn-wish:active,
+.btn-wish:focus {
+  background-color: #E479BD;
+}
+
+.btn-wish:hover svg path,
+.btn-wish:active svg path,
+.btn-wish:focus svg path {
+  fill: #F9CDE9;
 }
 
 .btn-up {
@@ -356,6 +388,150 @@ input[type='submit'] {
   color: #E479BD;
 }
 
+.pagination {
+  margin-top: 60px;
+}
+
+.pagination ul {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li + li {
+  margin-left: 5px;
+}
+
+.pagination a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #1E1E1E;
+  opacity: 0.6;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.pagination a:hover,
+.pagination a:active,
+.pagination a:focus {
+  border-color: #F9CDE9;
+}
+
+.pagination .bx_active a {
+  color: #fff;
+  background-color: #1E1E1E;
+  opacity: 1;
+  border: 1px solid transparent;
+}
+
+.card {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.card__list-3 .card {
+  width: calc(33.333333333333336% - 20px);
+}
+
+.card__image-slide {
+  width: 100%;
+  height: 440px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card__image-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 20px;
+}
+
+.card .slick-dots {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.card .slick-dots li,
+.card .slick-dots button {
+  width: 100%;
+  height: 100%;
+}
+
+.card .slick-dots button {
+  font-size: 0;
+}
+
+.card__info {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.card__title {
+  margin-bottom: 12px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.card__price-new {
+  margin-right: 10px;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.card__price-old {
+  font-size: 14px;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.card__size {
+  margin-top: 20px;
+}
+
+.card__size-item {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.card__btns {
+  margin-top: 24px;
+  display: flex;
+}
+
+.card__btns .btn-wish {
+  margin-left: 8px;
+}
+
 .accordion__body {
   display: none;
 }
@@ -388,6 +564,11 @@ input[type='submit'] {
 .page__text {
   font-size: 14px;
   color: rgba(30, 30, 30, 0.6);
+}
+
+.wish .card__btns .btn,
+.wish .card__btns .btn-wish {
+  vertical-align: middle;
 }
 
 .faq .accordion__item {
@@ -598,8 +779,40 @@ input[type='submit'] {
 }
 
 @media screen and (max-width: 834px) {
+  .d-md-none {
+    display: none;
+  }
+
   .breadcrumbs {
     margin-bottom: 20px;
+  }
+
+  .pagination {
+    margin-top: 48px;
+  }
+
+  .card__list-3 .card {
+    width: calc(50% - 20px);
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card__image-slide {
+    height: 263px;
+  }
+
+  .card__price-new {
+    margin-right: 0;
+  }
+
+  .card__size {
+    margin-top: 16px;
+  }
+
+  .card__btns {
+    margin-top: 18px;
   }
 
   .page {
@@ -670,6 +883,35 @@ input[type='submit'] {
 @media screen and (max-width: 576px) {
   .btn {
     padding: 16px 39px;
+  }
+
+  .pagination {
+    margin-top: 40px;
+  }
+
+  .pagination a {
+    font-size: 16px;
+  }
+
+  .card__list-3 .card {
+    width: calc(100% - 20px);
+  }
+
+  .card__title {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .card__price-new {
+    font-size: 14px;
+  }
+
+  .card__btns {
+    margin-top: 24px;
+  }
+
+  .card__btns .btn-wish {
+    border-radius: 50%;
   }
 
   .page {
