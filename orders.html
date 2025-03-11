@@ -114,18 +114,77 @@
 
 	<main class="page">
 
-		<section>
-			<div class="container" style="text-align: center; margin: 50px 0;">
-				<h1 class="page__h1">Список страниц</h1>
-				<ul style="font-size: 20px;">
-					<li style="margin-bottom: 10px;"><a href="profile.html">ЛК: Основная информация</a></li>
-					<li style="margin-bottom: 10px;"><a href="orders.html">ЛК: Мои заказы</a></li>
-					<li style="margin-bottom: 10px;"><a href="faq.html">Оплата и доставка</a></li>
-					<li style="margin-bottom: 10px;"><a href="wish-list.html">Вишлист</a></li>
-					<li style="margin-bottom: 10px;"><a href="privacy.html">Политика конфиденциальности</a></li>
-					<li style="margin-bottom: 10px;"><a href="oferta.html">Публичная оферта</a></li>
-					<li style="margin-bottom: 10px;"><a href="404.html">Страница 404</a></li>
-				</ul>
+		<section class="account orders">
+			<div class="container">
+
+				<div id="navigation">
+					<div class="breadcrumbs">
+						<div class="bx-breadcrumb-item"><a href="index.html">Главная</a></div>
+						<div class="separator">/</div>
+						<div class="bx-breadcrumb-item">Личный кабинет: мои заказы</div>
+					</div>
+				</div>
+
+				<h1 class="page__h1 account__h1">Личный кабинет</h1>
+
+				<div class="account__nav">
+					<a href="profile.html" class="account__nav-item">Основная информация</a>
+					<a href="#" class="account__nav-item active">Мои заказы</a>
+				</div>
+
+				<div class="orders__list accordion">
+
+					<div class="orders__item accordion__item">
+						<div class="accordion__header">
+							<table class="orders__wrapper">
+								<tr>
+									<th>Статус</th><th>Номер заказа</th><th>Дата оформления</th><th>Сумма</th>
+								</tr>
+								<tr>
+									<td class="orders__status">Оформлен</td><td>123456789</td><td>22 апреля 2025</td><td>10 999 ₽</td>
+								</tr>
+							</table>
+						</div>
+						<div class="accordion__body">
+							<div class="orders__wrapper">
+								<table>
+									<tr><th colspan="2">Адрес доставки</th></tr>
+									<tr><td th colspan="2">Адрес доставкиАдрес доставкиАдрес доставкиАдрес доставкиАдрес доставкиАдрес доставки</td></tr>
+									<tr><th>Дата оформления</th><th>Сумма</th></tr>
+									<tr><td>22 апреля 2025</td><td>10 999 ₽</td></tr>
+								</table>
+								<button type="button" class="btn" data-fancybox data-src="#sendback">Оформить возврат</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="orders__item accordion__item">
+						<div class="accordion__header">
+							<table>
+								<tr>
+									<th>Статус</th><th>Номер заказа</th><th>Дата оформления</th><th>Сумма</th>
+								</tr>
+								<tr>
+									<td class="orders__status final">Доставлен</td><td>123456789</td><td>22 апреля 2025</td><td>10 999 ₽</td>
+								</tr>
+							</table>
+						</div>
+						<div class="accordion__body">
+							<div class="orders__wrapper">
+								<table>
+									<tr><th colspan="2">Адрес доставки</th></tr>
+									<tr><td th colspan="2">Адрес доставкиАдрес доставкиАдрес доставкиАдрес доставкиАдрес доставкиАдрес доставки</td></tr>
+									<tr><th>Дата оформления</th><th>Сумма</th></tr>
+									<tr><td>22 апреля 2025</td><td>10 999 ₽</td></tr>
+								</table>
+								<button type="button" class="btn" data-fancybox data-src="#sendback">Оформить возврат</button>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+				
 			</div>
 		</section>
 		

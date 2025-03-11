@@ -114,18 +114,78 @@
 
 	<main class="page">
 
-		<section>
-			<div class="container" style="text-align: center; margin: 50px 0;">
-				<h1 class="page__h1">Список страниц</h1>
-				<ul style="font-size: 20px;">
-					<li style="margin-bottom: 10px;"><a href="profile.html">ЛК: Основная информация</a></li>
-					<li style="margin-bottom: 10px;"><a href="orders.html">ЛК: Мои заказы</a></li>
-					<li style="margin-bottom: 10px;"><a href="faq.html">Оплата и доставка</a></li>
-					<li style="margin-bottom: 10px;"><a href="wish-list.html">Вишлист</a></li>
-					<li style="margin-bottom: 10px;"><a href="privacy.html">Политика конфиденциальности</a></li>
-					<li style="margin-bottom: 10px;"><a href="oferta.html">Публичная оферта</a></li>
-					<li style="margin-bottom: 10px;"><a href="404.html">Страница 404</a></li>
-				</ul>
+		<section class="account">
+			<div class="container">
+
+				<div class="account__wrapper">
+
+					<div id="navigation">
+						<div class="breadcrumbs">
+							<div class="bx-breadcrumb-item"><a href="index.html">Главная</a></div>
+							<div class="separator">/</div>
+							<div class="bx-breadcrumb-item">Личный кабинет: основная информация</div>
+						</div>
+					</div>
+
+					<h1 class="page__h1 account__h1">Личный кабинет</h1>
+
+					<div class="account__nav">
+						<a href="#" class="account__nav-item active">Основная информация</a>
+						<a href="orders.html" class="account__nav-item">Мои заказы</a>
+					</div>
+
+					<div class="account__bonus">Количество бонусных баллов: <span>0</span></div>
+
+					<form class="form account__form" action="#">
+						<div class="form__all">
+
+							<div class="form__wrap">
+								<div class="form__line">
+									<label for="name" class="form__label">Имя</label>
+									<input type="text" class="form__input w-100" name="name" id="name" placeholder="Укажите имя" required>
+								</div>
+								<div class="form__line">
+									<label for="surname" class="form__label">Фамилия</label>
+									<input type="text" class="form__input" name="surname" id="surname" placeholder="Укажите фамилию" required>
+								</div>
+								<div class="form__line">
+									<label for="email" class="form__label">E-mail</label>
+									<input type="email" class="form__input" name="email" id="email" placeholder="Укажите E-mail" required>
+								</div>
+								<div class="form__line">
+									<label for="phone" class="form__label">Телефон</label>
+									<input type="tel" class="form__input" name="phone" id="phone" placeholder="Укажите телефон" required>
+								</div>
+								<div class="form__line">
+									<label for="pass" class="form__label">Пароль</label>
+									<input type="password" class="form__input" name="pass" id="pass" placeholder="Пароль" required>
+								</div>
+								<div class="form__line">
+									<input type="text" class="form__input" name="birth" id="birth" placeholder="Дата рождения">
+									<!-- <div class="form__select-wrapper"> -->
+										<select class="form__select" name="sex" id="sex">
+											<option disabled selected value="">Ваш пол</option>
+											<option value="male">Мужской</option>
+											<option value="female">Женский</option>
+										</select>
+									<!-- </div> -->
+								</div>
+							</div>
+
+							<div class="form__wrap">
+								<input type="text" class="form__input" name="city" id="city" placeholder="Город" required>
+								<input type="text" class="form__input" name="street" id="street" placeholder="Улица" required>
+								<input type="text" class="form__input" name="building" id="building" placeholder="Дом или корпус" required>
+								<input type="text" class="form__input" name="flat" id="flat" placeholder="Квартира" required>
+								<input type="text" class="form__input" name="floor" id="floor" placeholder="Этаж" required>
+								<input type="text" class="form__input" name="intercom" id="intercom" placeholder="Домофон" required>
+
+							</div>
+						</div>
+						<button class="btn form__btn w-100" type="submit">Сохранить</button>
+					</form>
+
+				</div>
 			</div>
 		</section>
 		
