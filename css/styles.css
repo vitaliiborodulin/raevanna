@@ -226,7 +226,7 @@ select {
 @font-face {
   font-family: 'Geologica';
   src: url('../fonts/GEOLOGICA_AUTO-BOLD.eot');
-  src: url('../fonts/GEOLOGICA_AUTO-BOLD.eot?#iefix') format('embedded-opentype'), url('../fonts/GEOLOGICA_AUTO-BOLD.ttf') format('truetype');
+  src: url('../fonts/GEOLOGICA_AUTO-BOLD.eot?#iefix') format('embedded-opentype'), url('../fonts/GEOLOGICA_AUTO-BOLD.woff2') format('woff2'), url('../fonts/GEOLOGICA_AUTO-BOLD.woff') format('woff'), url('../fonts/GEOLOGICA_AUTO-BOLD.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -319,6 +319,10 @@ input[type='submit'] {
 .btn:active,
 .btn:focus {
   color: #E479BD;
+  background-color: #F9CDE9;
+}
+
+.btn-out {
   background-color: #F9CDE9;
 }
 
@@ -424,7 +428,6 @@ input[type='submit'] {
   padding: 16px 12px;
   color: rgba(30, 30, 30, 0.6);
   background: #FBFBFB url(../img/arrow-down-black.svg) no-repeat 95% center;
-  border: 1px solid transparent;
   border-radius: 15px;
   opacity: 0.6;
 }
@@ -475,7 +478,7 @@ input[type='submit'] {
 }
 
 .pagination {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .pagination ul {
@@ -514,11 +517,34 @@ input[type='submit'] {
   border: 1px solid transparent;
 }
 
+.tnav__item {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: #FBFBFB;
+  transition: border 0.5s ease;
+}
+
+.tnav__item.active {
+  color: #fff;
+  background-color: #1E1E1E;
+}
+
+.tnav__item:hover {
+  border: 1px solid #E479BD;
+}
+
 .card {
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 .card__list {
@@ -528,8 +554,16 @@ input[type='submit'] {
   margin-right: -10px;
 }
 
+.card__list-2 .card {
+  width: calc(50% - 20px);
+}
+
 .card__list-3 .card {
   width: calc(33.333333333333336% - 20px);
+}
+
+.card__image-wrapper {
+  position: relative;
 }
 
 .card__image-slide {
@@ -616,6 +650,18 @@ input[type='submit'] {
 
 .card__btns .btn-wish {
   margin-left: 8px;
+}
+
+.card__badge {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #FBFBFB;
+  background-color: #1E1E1E;
+  border-radius: 20px;
 }
 
 .accordion__header {
@@ -772,6 +818,55 @@ input[type='submit'] {
   color: rgba(30, 30, 30, 0.6);
 }
 
+.catalog__h1 {
+  margin-bottom: 24px;
+}
+
+.catalog__nav-wrapper {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.catalog__select-wrapper {
+  padding: 10px 0;
+}
+
+.catalog__select {
+  padding-left: 4px;
+  padding-right: 13px;
+  background: url(../img/arrow-down-black.svg) no-repeat 98% center;
+  border: none;
+  outline: none;
+}
+
+.catalog__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.catalog__filter {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.333333333333336% - 20px);
+}
+
+.catalog__box {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(66.66666666666667% - 20px);
+}
+
 .account__wrapper {
   max-width: 929px;
 }
@@ -783,28 +878,6 @@ input[type='submit'] {
 .account__nav {
   margin-top: 20px;
   margin-bottom: 8px;
-}
-
-.account__nav-item {
-  display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  padding: 4px 10px;
-  font-size: 13px;
-  font-weight: 400;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  background-color: #FBFBFB;
-  transition: border 0.5s ease;
-}
-
-.account__nav-item.active {
-  color: #fff;
-  background-color: #1E1E1E;
-}
-
-.account__nav-item:hover {
-  border: 1px solid #E479BD;
 }
 
 .account__bonus {
@@ -1093,15 +1166,11 @@ input[type='submit'] {
   }
 
   .pagination {
-    margin-top: 48px;
+    margin-top: 28px;
   }
 
   .card__list-3 .card {
     width: calc(50% - 20px);
-  }
-
-  .card {
-    margin-bottom: 20px;
   }
 
   .card__image-slide {
@@ -1118,6 +1187,11 @@ input[type='submit'] {
 
   .card__btns {
     margin-top: 18px;
+  }
+
+  .card__badge {
+    right: 16px;
+    top: 16px;
   }
 
   .header__top {
@@ -1147,6 +1221,14 @@ input[type='submit'] {
   .page__h1 {
     margin-top: 20px;
     font-size: 36px;
+  }
+
+  .catalog__filter {
+    width: calc(100% - 20px);
+  }
+
+  .catalog__box {
+    width: calc(100% - 20px);
   }
 
   .account__bonus {
@@ -1253,11 +1335,15 @@ input[type='submit'] {
   }
 
   .pagination {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .pagination a {
     font-size: 16px;
+  }
+
+  .card__list-2 .card {
+    width: calc(100% - 20px);
   }
 
   .card__list-3 .card {
@@ -1279,6 +1365,11 @@ input[type='submit'] {
 
   .card__btns .btn-wish {
     border-radius: 50%;
+  }
+
+  .card__badge {
+    right: 10px;
+    top: 10px;
   }
 
   .header__logo {
