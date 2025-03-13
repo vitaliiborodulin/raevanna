@@ -352,12 +352,26 @@ input[type='submit'] {
 .btn-wish:hover,
 .btn-wish:active,
 .btn-wish:focus {
-  background-color: #E479BD;
+  background-color: #F9CDE9;
+}
+
+.btn-wish svg path {
+  transition: fill 0.5s;
 }
 
 .btn-wish:hover svg path,
 .btn-wish:active svg path,
 .btn-wish:focus svg path {
+  fill: #E479BD;
+}
+
+.btn-wish-active svg path:first-child {
+  fill: #E479BD;
+}
+
+.btn-wish-active:hover svg path:first-child,
+.btn-wish-active:active svg path:first-child,
+.btn-wish-active:focus svg path:first-child {
   fill: #F9CDE9;
 }
 
@@ -680,6 +694,15 @@ input[type='submit'] {
   border-radius: 20px;
 }
 
+.card-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background-color: #B0B0B0;
+  border-radius: 20px;
+}
+
 .accordion__header {
   position: relative;
   cursor: pointer;
@@ -894,6 +917,55 @@ input[type='submit'] {
           animation: bg-scrolling-reverse 50s infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
+
+.index {
+  padding: 100px 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.index li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 10px;
+}
+
+.index a {
+  font-size: 18px;
+}
+
+.index a:hover {
+  text-decoration: underline;
+}
+
+.home__section {
+  padding: 70px 0;
+}
+
+.home__section-head {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home__h2 {
+  font-size: 40px;
+}
+
+.home__link-all {
+  padding: 4px 10px;
+  font-size: 13px;
+  color: #FBFBFB;
+  background-color: #1E1E1E;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.home__link-all:hover {
+  border: 1px solid #E479BD;
 }
 
 .page {
@@ -1318,6 +1390,18 @@ input[type='submit'] {
     display: none;
   }
 
+  .home__section {
+    padding: 50px 0;
+  }
+
+  .home__section-head {
+    margin-bottom: 32px;
+  }
+
+  .home__h2 {
+    font-size: 30px;
+  }
+
   .page {
     padding-bottom: 100px;
   }
@@ -1476,6 +1560,10 @@ input[type='submit'] {
     width: calc(100% - 20px);
   }
 
+  .card {
+    margin-bottom: 16px;
+  }
+
   .card__title {
     margin-bottom: 8px;
     font-size: 18px;
@@ -1509,6 +1597,18 @@ input[type='submit'] {
 
   .header__user a + a {
     margin-left: 4px;
+  }
+
+  .home__section {
+    padding: 25px 0;
+  }
+
+  .home__section-head {
+    margin-bottom: 16px;
+  }
+
+  .home__h2 {
+    font-size: 24px;
   }
 
   .page {
