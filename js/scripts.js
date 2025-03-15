@@ -54,6 +54,42 @@ $(function() {
     $('.card__image').on('mouseenter', '.slick-dots button', function(event) {
         $(this).parents('.card__image').slick('slickGoTo', $(this).parent().index());
     });
+    
+    // feedback slider
+    
+    $('.feedback__slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        // infinite: true,
+        // speed: 500,
+        // arrows: false,
+        nextArrow: $('.feedback .slider__arrow-next'),
+        prevArrow: $('.feedback .slider__arrow-prev'),
+        // cssEase: 'linear',
+        // dots: true,
+        // fade: true,
+        // autoplay: false,
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 834,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    });
     // $('[data-fancybox]').fancybox({
     //     // thumbs : { autoStart:true },
     //     toolbar: "auto",
