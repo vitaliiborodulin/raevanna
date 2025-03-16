@@ -102,7 +102,7 @@ $(function() {
     //     }
     // });
     
-    $('.popup').fancybox({
+    $('.popup-link').fancybox({
         // thumbs : { autoStart:true },
         toolbar: "auto",
         infobar: true,
@@ -111,7 +111,8 @@ $(function() {
         loop: true,
         iframe : {
             preload : false
-        }
+        },
+        closeExisting : true
     });
     var arrowUpBtn = $('.btn-up');
     

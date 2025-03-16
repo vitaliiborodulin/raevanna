@@ -80,13 +80,13 @@
 	                        </div>
 	
 	                        <div class="header__user">
-	                            <a href="#" title="Личный кабинет">
+	                            <a href="javascript:;" class="popup-link" data-src="#login" title="Личный кабинет">
 	                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 	                                    <circle cx="12" cy="6" r="4" fill="#F9CDE9" stroke="#E479BD"/>
 	                                    <ellipse cx="12" cy="17" rx="7" ry="4" fill="#F9CDE9" stroke="#E479BD"/>
 	                                </svg>
 	                            </a>
-	                            <a href="javascript:;" class="popup" data-src="#trash" title="Корзина">
+	                            <a href="javascript:;" class="popup-link" data-src="#trash" title="Корзина">
 	                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 	                                    <path d="M3.77645 12.5257C4.36167 9.40452 4.65428 7.84393 5.76518 6.92196C5.76518 6.92196 5.76518 6.92196 5.76518 6.92196C6.87608 6 8.46386 6 11.6394 6H12.3606C15.5362 6 17.124 6 18.2349 6.92196C18.2349 6.92196 18.2349 6.92196 18.2349 6.92196C19.3458 7.84393 19.6384 9.40452 20.2236 12.5257C21.0465 16.9146 21.458 19.1091 20.2584 20.5545C20.2584 20.5545 20.2584 20.5545 20.2584 20.5545C19.0587 22 16.826 22 12.3606 22H11.6394C7.17402 22 4.94131 22 3.74169 20.5545C3.74169 20.5545 3.74169 20.5545 3.74169 20.5545C2.54207 19.1091 2.95353 16.9146 3.77645 12.5257Z" fill="#F9CDE9"/>
 	                                    <path d="M3.74169 20.5545C4.94131 22 7.17402 22 11.6394 22H12.3606C16.826 22 19.0587 22 20.2584 20.5545M3.74169 20.5545C2.54207 19.1091 2.95353 16.9146 3.77645 12.5257C4.36167 9.40452 4.65428 7.84393 5.76518 6.92196M3.74169 20.5545C3.74169 20.5545 3.74169 20.5545 3.74169 20.5545ZM20.2584 20.5545C21.458 19.1091 21.0465 16.9146 20.2236 12.5257C19.6384 9.40452 19.3458 7.84393 18.2349 6.92196M20.2584 20.5545C20.2583 20.5545 20.2584 20.5545 20.2584 20.5545ZM18.2349 6.92196C17.124 6 15.5362 6 12.3606 6H11.6394C8.46386 6 6.87608 6 5.76518 6.92196M18.2349 6.92196C18.2349 6.92196 18.2349 6.92196 18.2349 6.92196ZM5.76518 6.92196C5.76518 6.92196 5.76518 6.92196 5.76518 6.92196Z" stroke="#E479BD"/>
@@ -400,9 +400,60 @@
 	    Уведомить о наличии товара
 	</div>
 	
-	<div style="display: none;" class="popup" id="reg">
+	<div style="display: none;" class="popup" id="login">
+	    <div class="popup__title">Вход</div>
+	    <form action="#" class="form popup__form">
+	        <input type="email" class="form__input w-100" name="email" placeholder="Email*" required>
+	        <input type="password" class="form__input" name="pass" id="pass" placeholder="Пароль" required>
+	        <div class="popup__links">
+	            <a href="javascript:;" class="popup-link" data-src="#reg">Зарегистрироваться</a>
+	            <a href="javascript:;" class="popup-link" data-src="#lostpass">Забыл пароль</a>
+	        </div>
+	        <button class="btn form__btn w-100" type="submit">Войти</button>
+	    </form>
 	
-	    Зарегистрироваться
+	</div>
+	
+	<div style="display: none;" class="popup" id="reg">
+	    <div class="popup__title">Регистрация</div>
+	    <form action="#" class="form popup__form">
+	        <input type="text" class="form__input w-100" name="name" id="name" placeholder="Имя*" required>
+	        <input type="tel" class="form__input" name="phone" id="phone" placeholder="Телефон*" required>
+	        <input type="email" class="form__input w-100" name="email" placeholder="Email*" required>
+	        <input type="password" class="form__input" name="pass" id="pass" placeholder="Пароль" required>
+	        <div class="form__checkbox-wrapper">
+	            <label>
+	                <input type="checkbox" name="oferta" class="form__checkbox">
+	                <span class="form__checkbox-text">Я прочитал и согласен с условиями публичной оферты</span>
+	            </label>
+	        </div>
+	        <div class="form__checkbox-wrapper">
+	            <label>
+	                <input type="checkbox" name="privacy" class="form__checkbox">
+	                <span class="form__checkbox-text">Я прочитал и согласен с условиями политики обработки персональных данных</span>
+	            </label>
+	        </div>
+	        <button class="btn form__btn w-100" type="submit">Зарегистрироваться</button>
+	    </form>
+	</div>
+	
+	<div style="display: none;" class="popup" id="lostpass">
+	    <div class="popup__title">Забыли пароль?</div>
+	    <div class="popup__subtitle">Введите ваш e-mail, к которому привязан ваш личный кабинет</div>
+	    <form action="#" class="form popup__form">
+	        <input type="email" class="form__input w-100" name="email" placeholder="Email*" required>
+	        <button class="btn form__btn w-100" type="submit">Отправить</button>
+	    </form>
+	</div>
+	
+	<div style="display: none;" class="popup" id="first">
+	    <div class="popup__title">Получите скидку 1000 рублей на первую покупку</div>
+	    <div class="popup__subtitle">Подпишитесь на нашу новостную рассылку и получите промо-код на 1000 рублей</div>
+	    <form action="#" class="form popup__form">
+	        <input type="email" class="form__input w-100" name="email" placeholder="Email*" required>
+	        <button class="btn form__btn w-100" type="submit">Подписаться</button>
+	        <div class="popup__bottom">Нажимая на кнопку “Подписаться”, вы соглашаетесь с политикой сбора персональных данных</div>
+	    </form>
 	</div>
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
