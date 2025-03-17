@@ -476,7 +476,6 @@ input[type='submit'] {
 
 .form__input {
   display: block;
-  width: 100%;
   margin-bottom: 16px;
   padding: 16px 12px;
   font-size: 14px;
@@ -523,7 +522,7 @@ input[type='submit'] {
   max-width: 340px;
 }
 
-.form__checkbox-wrapper label {
+.form__input-wrapper {
   display: flex;
   align-items: center;
 }
@@ -562,6 +561,48 @@ input[type='submit'] {
 
 .form__checkbox-text {
   font-size: 18px;
+}
+
+.form legend {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.form fieldset {
+  margin-bottom: 32px;
+}
+
+.form__bottom-text {
+  margin-top: 16px;
+  font-size: 12px;
+  opacity: 0.4;
+}
+
+.form .form__checkbox-pay-wrapper label {
+  width: 200px;
+  display: inline-block;
+  padding: 16px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 20px;
+  text-align: center;
+  color: #1E1E1E;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.form .form__checkbox-pay-wrapper:first-child label {
+  width: 240px;
+}
+
+.form .form__checkbox-pay {
+  border: 1px solid transparent;
+}
+
+.form .form__checkbox-pay:checked + label {
+  color: #E479BD;
+  border: 1px solid #E479BD;
 }
 
 .breadcrumbs {
@@ -846,7 +887,7 @@ input[type='submit'] {
   background-color: #FAECF5;
 }
 
-.filter .form__checkbox-wrapper {
+.filter .form__input-wrapper {
   margin-top: 24px;
 }
 
@@ -1328,6 +1369,32 @@ input[type='submit'] {
 .orders td {
   padding: 4px;
   font-size: 18px;
+}
+
+.order__form .form__input {
+  margin-bottom: 8px;
+}
+
+.order__form .form__input-wrapper + .form__input-wrapper {
+  margin-top: 16px;
+}
+
+.order__form .form__wrap:last-child fieldset:last-child {
+  margin-bottom: 0;
+}
+
+.order__form .form__line {
+  gap: 8px;
+  flex-direction: row;
+}
+
+.order__form .form__line .form__input {
+  margin-bottom: 0;
+}
+
+.order__form .form__submit,
+.order__form .form__bottom-text {
+  max-width: 448px;
 }
 
 .wish .card__btns .btn,
@@ -1854,7 +1921,7 @@ input[type='submit'] {
 
 @media screen and (max-width: 576px) {
   .btn {
-    padding: 16px 39px;
+    padding: 16px 35px;
   }
 
   .form__wrap {
@@ -1880,6 +1947,28 @@ input[type='submit'] {
   .form__line .form__label + .form__input {
     width: 100%;
     max-width: 100%;
+  }
+
+  .form legend {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .form fieldset {
+    margin-bottom: 20px;
+  }
+
+  .form .form__checkbox-pay-wrapper {
+    width: 100%;
+  }
+
+  .form .form__checkbox-pay-wrapper label {
+    padding: 16px 2px;
+    width: 100%;
+  }
+
+  .form .form__checkbox-pay-wrapper:first-child label {
+    width: 200px;
   }
 
   .pagination {
@@ -2076,6 +2165,10 @@ input[type='submit'] {
   .orders .accordion__body tr:nth-child(3),
   .orders .accordion__body tr:nth-child(4) {
     display: table-row;
+  }
+
+  .order__form input[name="points"] + .btn {
+    padding: 16px 12px;
   }
 
   .faq .accordion__header {
