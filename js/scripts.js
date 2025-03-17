@@ -94,7 +94,7 @@ $(function() {
     $(".form__date").flatpickr({
         locale: "ru",
         dateFormat: "d.m.Y",
-        minDate: "today",
+        // minDate: "today",
         // defaultDate: ["today"],
         disableMobile: "true"
     });
