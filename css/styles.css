@@ -848,6 +848,7 @@ input[type='submit'] {
   -o-object-position: center;
      object-position: center;
   cursor: pointer;
+  border-radius: inherit;
 }
 
 .card__video.play::before {
