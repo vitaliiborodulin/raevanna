@@ -1,7 +1,7 @@
 $(function() {
 
     $('input[type="tel"]').mask("+7 (999) 999-99-99");
-    $('input[name="birth"]').mask("99.99.9999");
+    // $('input[name="birth"]').mask("99.99.9999");
     $('.accordion__item:first-child').find('.accordion__header').addClass('active');
     $('.accordion__item:first-child').find('.accordion__body').show();
     
@@ -109,6 +109,19 @@ $(function() {
         // maxTime: "22:30",
         // defaultDate: "13:45"
         disableMobile: "true"
+    });
+    // $('.card__video').on('mouseenter', 'video', function(event) {
+    //     $(this).get(0).play();
+    //     $(this).parent().addClass('play');
+    // });
+    
+    // $('.card__video').on('mouseleave', 'video', function(event) {
+    //     $(this).get(0).pause();
+    // });
+    
+    $('.card__video').on('click', 'video', function() {
+        this.paused ? this.play() : this.pause();
+        this.paused ? $(this).parent().removeClass('play') : $(this).parent().addClass('play');
     });
     // $('[data-fancybox]').fancybox({
     //     // thumbs : { autoStart:true },

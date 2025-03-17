@@ -235,7 +235,8 @@
 	                <div class="footer__bottom-text">
 	                    ИП Раева А.А. <br>
 	                    ИНН: 784802426489 <br>
-	                    ОГРНИП: 324784700352787
+	                    ОГРНИП: 324784700352787 <br><br>
+	                    Разработка <a href="https://doingbiz.ru/" target="_blank">DoingBiz</a>
 	                </div>
 	                <a href="privacy.html">Политика конфиденциальности</a>
 	                <a href="#">Юридическая информация</a>
@@ -264,7 +265,7 @@
 	    <div class="popup__title">Вход</div>
 	    <form action="#" class="form popup__form">
 	        <input type="email" class="form__input w-100" name="email" placeholder="Email*" required>
-	        <input type="password" class="form__input" name="pass" id="pass" placeholder="Пароль" required>
+	        <input type="password" class="form__input w-100" name="pass" id="pass" placeholder="Пароль" required>
 	        <div class="popup__links">
 	            <a href="javascript:;" class="popup-link" data-src="#reg">Зарегистрироваться</a>
 	            <a href="javascript:;" class="popup-link" data-src="#lostpass">Забыл пароль</a>
@@ -278,20 +279,16 @@
 	    <div class="popup__title">Регистрация</div>
 	    <form action="#" class="form popup__form">
 	        <input type="text" class="form__input w-100" name="name" id="name" placeholder="Имя*" required>
-	        <input type="tel" class="form__input" name="phone" id="phone" placeholder="Телефон*" required>
+	        <input type="tel" class="form__input w-100" name="phone" id="phone" placeholder="Телефон*" required>
 	        <input type="email" class="form__input w-100" name="email" placeholder="Email*" required>
-	        <input type="password" class="form__input" name="pass" id="pass" placeholder="Пароль" required>
-	        <div class="form__checkbox-wrapper">
-	            <label>
-	                <input type="checkbox" name="oferta" class="form__checkbox">
-	                <span class="form__checkbox-text">Я прочитал и согласен с условиями публичной оферты</span>
-	            </label>
+	        <input type="password" class="form__input w-100" name="pass" id="pass1" placeholder="Пароль" required>
+	        <div class="form__input-wrapper">
+	            <input type="checkbox" name="oferta" id="oferta" class="form__checkbox">
+	            <label for="oferta" class="form__checkbox-text">Я прочитал и согласен с условиями публичной оферты</l>
 	        </div>
-	        <div class="form__checkbox-wrapper">
-	            <label>
-	                <input type="checkbox" name="privacy" class="form__checkbox">
-	                <span class="form__checkbox-text">Я прочитал и согласен с условиями политики обработки персональных данных</span>
-	            </label>
+	        <div class="form__input-wrapper">
+	            <input type="checkbox" name="privacy" id="privacy" class="form__checkbox">
+	            <label for="privacy" class="form__checkbox-text">Я прочитал и согласен с условиями политики обработки персональных данных</label>
 	        </div>
 	        <button class="btn form__btn w-100" type="submit">Зарегистрироваться</button>
 	    </form>
