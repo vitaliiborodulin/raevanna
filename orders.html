@@ -133,7 +133,7 @@
 					<a href="#" class="tnav__item active">Мои заказы</a>
 				</div>
 
-				<div class="orders__list accordion">
+				<div class="orders__items accordion">
 
 					<div class="orders__item accordion__item">
 						<div class="accordion__header">
@@ -154,14 +154,32 @@
 									<tr><th>Дата оформления</th><th>Сумма</th></tr>
 									<tr><td>22 апреля 2025</td><td>10 999 ₽</td></tr>
 								</table>
-								<button type="button" class="btn" data-fancybox data-src="#sendback">Оформить возврат</button>
+								<button type="button" class="btn popup-link" data-src="#sendback">Оформить возврат</button>
+								<ul class="orders__list">
+									<li class="orders__list-item">
+										<div class="orders__pic">
+											<img src="img/cat-3.jpg" alt="">
+										</div>
+										<div class="orders__title">Название товара Название товара Название товара </div>
+										<div class="orders__price">6 000 ₽ </div>
+										<div class="orders__size">xs</div>
+									</li>
+									<li class="orders__list-item">
+										<div class="orders__pic">
+											<img src="img/cat-1.jpg" alt="">
+										</div>
+										<div class="orders__title">Название товара Название</div>
+										<div class="orders__price">5 000 ₽ </div>
+										<div class="orders__size">s</div>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
 
 					<div class="orders__item accordion__item">
 						<div class="accordion__header">
-							<table>
+							<table class="orders__wrapper">
 								<tr>
 									<th>Статус</th><th>Номер заказа</th><th>Дата оформления</th><th>Сумма</th>
 								</tr>
@@ -178,7 +196,41 @@
 									<tr><th>Дата оформления</th><th>Сумма</th></tr>
 									<tr><td>22 апреля 2025</td><td>10 999 ₽</td></tr>
 								</table>
-								<button type="button" class="btn" data-fancybox data-src="#sendback">Оформить возврат</button>
+								<button type="button" class="btn popup-link" data-src="#sendback">Оформить возврат</button>
+								<ul class="orders__list">
+									<li class="orders__list-item">
+										<div class="orders__pic">
+											<img src="img/cat-3.jpg" alt="">
+										</div>
+										<div class="orders__title">Название товара</div>
+										<div class="orders__price">6 000 ₽ </div>
+										<div class="orders__size">xs</div>
+									</li>
+									<li class="orders__list-item">
+										<div class="orders__pic">
+											<img src="img/cat-1.jpg" alt="">
+										</div>
+										<div class="orders__title">Название товара Название</div>
+										<div class="orders__price">5 000 ₽ </div>
+										<div class="orders__size">s</div>
+									</li>
+									<li class="orders__list-item">
+										<div class="orders__pic">
+											<img src="img/cat-1.jpg" alt="">
+										</div>
+										<div class="orders__title">Название товара Название</div>
+										<div class="orders__price">5 000 ₽ </div>
+										<div class="orders__size">s</div>
+									</li>
+									<li class="orders__list-item">
+										<div class="orders__pic">
+											<img src="img/cat-1.jpg" alt="">
+										</div>
+										<div class="orders__title">Название товара Название</div>
+										<div class="orders__price">5 000 ₽ </div>
+										<div class="orders__size">s</div>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -296,8 +348,38 @@
 	</div>
 	
 	<div style="display: none;" class="popup" id="sendback">
+	    <div class="popup__title">Оформить возврат</div>
+	    <div class="orders__list-item">
+	        <div class="orders__pic">
+	            <img src="img/cat-3.jpg" alt="">
+	        </div>
+	        <div class="orders__text">
+	            <div class="orders__title">Название товара</div>
+	            <div class="orders__price">6 000 ₽ </div>
+	            <div class="orders__size">xs</div>
+	        </div>
+	    </div>
+	    <fieldset>
+	        <legend>Укажите причину возврата</legend>
+	        <div class="form__input-wrapper">
+	            <input type="radio" name="sendback" id="brak" class="form__checkbox" checked>
+	            <label for="brak">Пришел товар ненадлежащего качества</label>
+	        </div>
+	        <div class="form__input-wrapper">
+	            <input type="radio" name="sendback" id="wrongsize" class="form__checkbox">
+	            <label for="wrongsize">Не подошел размер</label>
+	        </div>
+	        <div class="form__input-wrapper">
+	            <input type="radio" name="sendback" id="fake" class="form__checkbox">
+	            <label for="fake">Доставлен не тот товар</label>
+	        </div>
+	    </fieldset>
+	    <!-- <button class="btn form__btn w-100" type="submit">Отправить</button> -->
+	    <a href="#" class="btn popup-link w-100" data-src="#success">Отправить</a>
+	</div>
 	
-	    оформить возврат
+	<div style="display: none;" class="popup" id="success">
+	    <div class="popup__title">Ваш запрос успешно отправлен</div>
 	</div>
 	
 	<div style="display: none;" class="popup" id="avail">

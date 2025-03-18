@@ -115,6 +115,95 @@
 
 	<main class="home">
 
+		<section class="home__hero">
+			<div class="container-fluid">
+
+				<div class="home__hero-slider">
+
+					<div class="home__hero-slide" style="background-image: url(img/hero-bg.jpg);">
+						<div class="home__hero-content">
+							<h1 class="home__hero-title">Новая коллекция</h1>
+							<div class="home__hero-subtitle">Новинки уже в нашем каталоге  Новинки<br> уже в нашем каталоге</div>
+							<a href="catalog.html" class="btn home__hero-btn">Каталог</a>
+						</div>
+					</div>
+					<div class="home__hero-slide" style="background-image: url(img/hero-bg-1.jpg);">
+						<div class="home__hero-content">
+							<div class="home__hero-title">Новая коллекция 1</div>
+							<div class="home__hero-subtitle">Новинки уже в нашем каталоге  Новинки<br> уже в нашем каталоге 1</div>
+							<a href="catalog.html" class="btn home__hero-btn">Каталог 1</a>
+						</div>
+					</div>
+					<div class="home__hero-slide" style="background-image: url(img/hero-bg-2.jpg);">
+						<div class="home__hero-content">
+							<div class="home__hero-title">Новая коллекция 2</div>
+							<div class="home__hero-subtitle">Новинки уже в нашем каталоге  Новинки<br> уже в нашем каталоге 2</div>
+							<a href="catalog.html" class="btn home__hero-btn">Каталог 2</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="slider__arrows">
+					<button type="button" class="slider__arrow slider__arrow-prev">
+						<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20 7H0M0 6.75862C3.86599 6.75862 7 3.73268 7 0M0 7.24138C3.86599 7.24138 7 10.2673 7 14" stroke="#E479BD"/>
+						</svg>								
+					</button>
+					<button type="button" class="slider__arrow slider__arrow-next">
+						<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 7H20M20 6.75862C16.134 6.75862 13 3.73268 13 0M20 7.24138C16.134 7.24138 13 10.2673 13 14" stroke="#E479BD"/>
+						</svg>								
+					</button>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="home__section">
+			<div class="container">
+				<div class="home__section-head">
+					<h2 class="home__h2">Каталог</h2>
+					<a href="catalog.html" class="home__link-all">Все товары</a>
+				</div>
+
+					<div class="cat__list">
+
+						<div class="cat__item" style="background-image: url(img/cat-1.jpg);">
+							<a href="catalog.html">
+								<h3 class="cat__title">
+									<span>Новинки</span>
+									<span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 7H20M20 6.75862C16.134 6.75862 13 3.73268 13 0M20 7.24138C16.134 7.24138 13 10.2673 13 14" stroke="#E479BD"/>
+									</svg></span>
+								</h3>
+							</a>
+						</div>
+						<div class="cat__item" style="background-image: url(img/cat-2.jpg);">
+							<a href="catalog.html">
+								<h3 class="cat__title">
+									<span>Женское</span>
+									<span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 7H20M20 6.75862C16.134 6.75862 13 3.73268 13 0M20 7.24138C16.134 7.24138 13 10.2673 13 14" stroke="#E479BD"/>
+									</svg></span>
+								</h3>
+							</a>
+						</div>
+						<div class="cat__item" style="background-image: url(img/cat-3.jpg);">
+							<a href="catalog.html">
+								<h3 class="cat__title">
+									<span>Sale</span>
+									<span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 7H20M20 6.75862C16.134 6.75862 13 3.73268 13 0M20 7.24138C16.134 7.24138 13 10.2673 13 14" stroke="#E479BD"/>
+									</svg></span>
+								</h3>
+							</a>
+						</div>
+
+
+					</div>
+			</div>
+		</section>
+
 		<section class="home__section">
 			<div class="container">
 				<div class="home__section-head">
@@ -693,8 +782,38 @@
 	</div>
 	
 	<div style="display: none;" class="popup" id="sendback">
+	    <div class="popup__title">Оформить возврат</div>
+	    <div class="orders__list-item">
+	        <div class="orders__pic">
+	            <img src="img/cat-3.jpg" alt="">
+	        </div>
+	        <div class="orders__text">
+	            <div class="orders__title">Название товара</div>
+	            <div class="orders__price">6 000 ₽ </div>
+	            <div class="orders__size">xs</div>
+	        </div>
+	    </div>
+	    <fieldset>
+	        <legend>Укажите причину возврата</legend>
+	        <div class="form__input-wrapper">
+	            <input type="radio" name="sendback" id="brak" class="form__checkbox" checked>
+	            <label for="brak">Пришел товар ненадлежащего качества</label>
+	        </div>
+	        <div class="form__input-wrapper">
+	            <input type="radio" name="sendback" id="wrongsize" class="form__checkbox">
+	            <label for="wrongsize">Не подошел размер</label>
+	        </div>
+	        <div class="form__input-wrapper">
+	            <input type="radio" name="sendback" id="fake" class="form__checkbox">
+	            <label for="fake">Доставлен не тот товар</label>
+	        </div>
+	    </fieldset>
+	    <!-- <button class="btn form__btn w-100" type="submit">Отправить</button> -->
+	    <a href="#" class="btn popup-link w-100" data-src="#success">Отправить</a>
+	</div>
 	
-	    оформить возврат
+	<div style="display: none;" class="popup" id="success">
+	    <div class="popup__title">Ваш запрос успешно отправлен</div>
 	</div>
 	
 	<div style="display: none;" class="popup" id="avail">

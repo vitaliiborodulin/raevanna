@@ -31,6 +31,22 @@ $(function() {
             filter.slideUp(300);
         }
     });
+    $('.home__hero-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        // speed: 500,
+        // arrows: false,
+        cssEase: 'linear',
+        fade: true,
+        nextArrow: $('.home__hero .slider__arrow-next'),
+        prevArrow: $('.home__hero .slider__arrow-prev'),
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnFocus: false,
+        pauseOnHover: false
+    });
+    
     $('.card__image').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -146,6 +162,10 @@ $(function() {
             preload : false
         },
         closeExisting : true
+    });
+    
+    $('#sendback .popup-link').on('click', function(){
+        
     });
     var arrowUpBtn = $('.btn-up');
     
