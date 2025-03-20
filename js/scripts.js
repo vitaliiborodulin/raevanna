@@ -72,7 +72,6 @@ $(function() {
     });
     
     // feedback slider
-    
     $('.feedback__slider').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -106,6 +105,41 @@ $(function() {
             },
         ]
     });
+    
+    // abouthistory
+    $('.history__slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: false,
+        // speed: 500,
+        arrows: false,
+        adaptiveHeight: true,
+        // nextArrow: $('.feedback .slider__arrow-next'),
+        // prevArrow: $('.feedback .slider__arrow-prev'),
+        // cssEase: 'linear',
+        // dots: true,
+        // fade: true,
+        // autoplay: false,
+        responsive: [
+            {
+                breakpoint: 834,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+    
+    // $('.history__slider').on('wheel', (function(e) {
+    //     // e.preventDefault();
+      
+    //     if (e.originalEvent.deltaY < 0) {
+    //       $(this).slick('slickPrev');
+    //     } else {
+    //       $(this).slick('slickNext');
+    //     }
+    // }));
     // $("input[type=date]").flatpickr();
     $(".form__date").flatpickr({
         locale: "ru",
