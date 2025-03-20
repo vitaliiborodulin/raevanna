@@ -3100,13 +3100,13 @@ input[type='submit'] {
 
   .subscribe__pics {
     position: static;
-    -webkit-columns: 8vw;
-            columns: 8vw;
     height: 165px;
     -webkit-column-count: 3;
             column-count: 3;
     -webkit-transform: none;
             transform: none;
+    -webkit-column-gap: 1px;
+            column-gap: 1px;
   }
 
   .subscribe__pic {
