@@ -1,5 +1,24 @@
 $(function() {
 
+    const burger = $('.header__burger');
+    const menu = $('.header__menu');
+    // const bg = $('.menu__outer');
+    
+    burger.on('click', function(e) {
+        e.preventDefault();
+        burger.toggleClass('header__burger--close');
+        menu.toggleClass('open').toggle(300);
+        // bg.toggleClass('bg');
+        $('html, body').toggleClass('overflow');
+    });
+    
+    $(document).keyup(function(e) {
+        if (e.key === "Escape" || e.keyCode === 27) {
+            menu.removeClass('open');
+            burger.removeClass('header__burger--close');
+            $('html, body').removeClass('overflow');
+        }
+    });
     $('input[type="tel"]').mask("+7 (999) 999-99-99");
     // $('input[name="birth"]').mask("99.99.9999");
     $('.accordion__item:first-child').find('.accordion__header').addClass('active');
@@ -67,7 +86,7 @@ $(function() {
         ]
     });
     
-    $('.card__image').on('mouseenter', '.slick-dots button', function(event) {
+    $('.card__image').on('mouseenter', '.slick-dots button', function() {
         $(this).parents('.card__image').slick('slickGoTo', $(this).parent().index());
     });
     
@@ -140,6 +159,41 @@ $(function() {
     //       $(this).slick('slickNext');
     //     }
     // }));
+    
+    // product more slider
+    $('.product__more-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        // speed: 500,
+        // arrows: false,
+        nextArrow: $('.product__more .slider__arrow-next'),
+        prevArrow: $('.product__more .slider__arrow-prev'),
+        // cssEase: 'linear',
+        // dots: true,
+        // fade: true,
+        // autoplay: false,
+        draggable: false,
+        swipe: false,
+        swipeToSlide: false,
+        touchMove: false,
+        draggable: false,
+        accessibility: false,
+        responsive: [
+            {
+                breakpoint: 834,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    });
     // $("input[type=date]").flatpickr();
     $(".form__date").flatpickr({
         locale: "ru",
@@ -198,9 +252,9 @@ $(function() {
         closeExisting : true
     });
     
-    $('#sendback .popup-link').on('click', function(){
+    // $('#sendback .popup-link').on('click', function(){
         
-    });
+    // });
     var arrowUpBtn = $('.btn-up');
     
     // function scrollBtn() {
