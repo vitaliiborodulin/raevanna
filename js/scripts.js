@@ -1,5 +1,6 @@
 $(function() {
 
+    // burger
     const burger = $('.header__burger');
     const menu = $('.header__menu');
     // const bg = $('.menu__outer');
@@ -18,6 +19,39 @@ $(function() {
             burger.removeClass('header__burger--close');
             $('html, body').removeClass('overflow');
         }
+    });
+    
+    
+    // submenu
+    $('.header__menu .menu-item-has-children > a').on('click', function(e) {
+    	e.preventDefault();
+    });
+    
+    var submenu =  $('.header__menu .sub-menu');
+    var menuChildren = $('.header__menu .menu-item-has-children');
+    
+    
+    menuChildren.on('click', function() {
+    	
+    	if ($(this).hasClass('active')){
+    			$(this).removeClass('active');
+    			$(this).find('.sub-menu').removeClass('open').hide();
+    	} else {
+                menuChildren.removeClass('active');
+                menuChildren.find('.sub-menu').removeClass('open').hide()
+    			$(this).addClass('active');
+    			$(this).find('.sub-menu').addClass('open').show();
+    	}
+    	// $(this).find('.sub-menu').toggleClass('open').slideToggle();
+    });
+    
+    $(document).on('click', function (e) {
+     
+    	if (!$('.header__menu .menu-item-has-children a').is(e.target) ){
+    			menuChildren.removeClass('active');
+    			submenu.removeClass('open').hide();
+    	}
+    
     });
     $('input[type="tel"]').mask("+7 (999) 999-99-99");
     // $('input[name="birth"]').mask("99.99.9999");
@@ -159,6 +193,29 @@ $(function() {
     //       $(this).slick('slickNext');
     //     }
     // }));
+    
+    // product main slider
+    $('.product__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        adaptiveHeight: true,
+        infinite: false,
+        asNavFor: '.product__navs'
+    });
+    
+    $('.product__navs').slick({
+        slidesToShow: 3,
+        asNavFor: '.product__slider',
+        focusOnSelect: true,
+        vertical: true,
+        verticalSwiping: true,
+        arrows: true,
+        infinite: false,
+        prevArrow: '<svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 5L5 2L8 5" stroke="#E479BD" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        nextArrow: '<svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4L5 7L2 4" stroke="#E479BD" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    });
     
     // product more slider
     $('.product__more-slider').slick({
