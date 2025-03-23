@@ -1,0 +1,138 @@
+.aboutus {
+
+    &__content {
+        display: flex;
+        gap: 15px;
+
+       .md(flex-wrap, wrap);
+       .xs(gap, 10px);
+
+        > * {
+            border-radius: 20px;
+        }
+    }
+
+    &__img {
+        width: 54%;
+        height: 810px;
+
+        .md-block({
+            width: 100%;
+            height: 580px;
+        });
+
+        .xs(height, 278px);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+    }
+
+    &__descr {
+        width: 46%;
+        padding: 60px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: @fb;
+
+        .md-block({
+            width: 100%;
+            order: -1;
+            padding-bottom: 95px;
+        });
+
+        .xs-block({
+            padding: 40px 20px;
+        });
+    }
+
+    &__pic {
+        width: 191px;
+        height: auto;
+        margin-bottom: 40px;
+        display: block;
+        border-radius: 20px;
+
+        .md(margin-bottom, 32px);
+
+        .xs-block({
+            margin-bottom: 24px;
+            width: 100px;
+        });
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 40px;
+
+        .md-block({
+            margin-bottom: 16px;
+            font-size: 30px;
+        });
+
+        .xs-block({
+            margin-bottom: 8px;
+            font-size: 24px;
+        });
+    }
+
+    &__text {
+        font-size: 18px;
+        text-align: center;
+        opacity: 0.6;
+
+        .xs(font-size, 14px);
+    }
+
+    .btn {
+        margin-top: 40px;
+
+        .md(margin-top, 32px);
+        .xs(margin-top, 24px);
+    }
+}
+
+// about
+
+.about {
+
+    .aboutus__content {
+        margin-top: 32px;
+        .md(margin-top, 20px);
+    }
+
+    .aboutus__img {
+        max-height: 80vh;
+    }
+
+    .subscribe {
+        padding-top: 70px;
+        .md(padding-top, 50px);
+        .xs(padding-top, 25px);
+    }
+
+    .subscribe__title {
+        .md(font-size, 24px);
+    }
+
+    .subscribe__text-wrapper {
+        align-items: flex-start;
+    }
+
+    .subscribe__content {
+
+        .md(height, 352px);
+
+        .xs-block({
+            height: auto;
+            background: none;
+        });
+    }
+}

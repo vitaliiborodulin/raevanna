@@ -2,7 +2,7 @@ module.exports = {
 	columns: 12,
 	offset: "20px",
 	container: {
-		maxWidth: "1630px",
+		maxWidth: "1830px",
 		fields: "15px" // Внимание! fields обязан быть >= offset / 2
 	},
 	breakPoints: {

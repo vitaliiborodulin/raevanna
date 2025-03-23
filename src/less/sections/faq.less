@@ -1,6 +1,6 @@
 .faq {
 
-    .accordion__item {
+    &__item {
         // padding: 18px 0;
         // padding-right: 40px;
         border-top: 1px solid rgba(30, 30, 30, 0.1);
@@ -10,16 +10,15 @@
         }
     }
     
-    .accordion__item:hover .accordion__header {
+    &__item:hover .accordion__header {
         background-color: @pink;
     }
     
     .accordion__header {
-        position: relative;
         padding: 18px 0;
         font-size: 22px;
         font-weight: 200;
-        cursor: pointer;
+        
         transition: background-color 0.3s ease;
 
         .md-block({
@@ -35,27 +34,6 @@
             padding-right: 40px;
         }
 
-        &::after {
-            position: absolute;
-            content: '';
-            right: 5px;
-            top: 50%;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            margin-top: -16px;
-            // background-color: @black;
-            background: @black url(../img/arrow-down.svg) no-repeat center;
-            transition: rotate .5s ease;
-        }
-
-        // &.active {
-        //     background-color: @pink;
-        // }
-
-        &.active::after {
-            transform: rotate(180deg);
-        }
     }
     
     .accordion__body {

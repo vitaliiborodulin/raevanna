@@ -1,0 +1,45 @@
+.order {
+
+    &__form {
+        .form__input {
+            margin-bottom: 8px;
+        }
+
+        .form__input-wrapper + .form__input-wrapper {
+            margin-top: 16px;
+        }
+
+        .form__wrap:last-child fieldset:last-child {
+            margin-bottom: 0;
+        }
+
+        .form__line {
+            gap: 8px;
+            flex-direction: row;
+            // justify-content: flex-start;
+            align-items: flex-end;
+            // flex-wrap: wrap;
+
+            .form__input {
+                margin-bottom: 0;
+            }
+        }
+
+        .form__submit, .form__bottom-text {
+            // width: 50%;
+            max-width: 448px;
+        }
+
+        // .form__submit {
+        //     margin-top: 32px;
+        // }
+
+        input[name="points"] + .btn {
+            // .xs(width, 40%);
+            .xs-block({
+                padding: 16px 12px;
+            });
+        }
+
+    }
+}

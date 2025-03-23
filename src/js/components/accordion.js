@@ -14,3 +14,16 @@ $('.accordion__header').on('click', function () {
         accBody.slideUp(300);
     }
 });
+
+
+$('.filter-btn').on('click', function () {
+    const filter = $('.filter');
+
+    if (!filter.hasClass('active')){
+        filter.addClass('active');
+        filter.slideDown(300);
+    } else {
+        filter.removeClass('active');
+        filter.slideUp(300);
+    }
+});

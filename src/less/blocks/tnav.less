@@ -1,0 +1,28 @@
+.tnav {
+    
+    &__item {
+        display: inline-block;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        padding: 4px 10px;
+
+        font-size: 13px;
+        font-weight: 400;
+
+        border: 1px solid transparent;
+        border-radius: 10px;
+        background-color: @fb;
+        // background-color: @white;
+
+        transition: border 0.5s ease;
+
+        &.active {
+            color: @white;
+            background-color: @black;
+        }
+
+        &:hover {
+            border: 1px solid @accent;
+        }
+    }
+}

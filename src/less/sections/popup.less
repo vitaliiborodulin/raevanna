@@ -1,0 +1,132 @@
+.popup {
+    width: 480px;
+    max-width: 100%;
+
+    padding: 60px 40px;
+
+    border-radius: 20px;
+    background-color: @bg;
+
+    .xs-block({
+        padding: 32px 20px;
+    });
+
+    .fancybox-close-small {
+        color: @accent;
+    }
+
+    &__title {
+        font-size: 22px;
+        text-align: center;
+        .xs(font-size, 18px);
+    }
+
+    &__subtitle {
+        margin: 16px 0;
+        font-size: 14px;
+        text-align: center;
+        opacity: 0.6;
+
+        .xs-block({
+            margin: 8px 0;
+        });
+    }
+
+    &__bottom {
+        margin-top: 40px;
+        font-size: 12px;
+        text-align: center;
+        opacity: 0.6;
+
+        .xs(margin-top, 24px);
+    }
+
+    &__form {
+        margin-top: 40px;
+        .xs(margin-top, 24px);
+    }
+
+    &__links {
+        margin: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        
+        a {
+            opacity: 0.6;
+            transition: color 0.5s ease;
+
+            &:hover {
+                color: @accent;
+            }
+        }
+    }
+
+    .form__input {
+        margin-bottom: 8px;
+        background-color: @white;
+    }
+
+    .form__input-wrapper {
+        margin-top: 8px;
+    }
+
+    .form__input-wrapper:first-of-type {
+        margin-top: 24px;
+    }
+    .form__input-wrapper:last-of-type {
+        margin-bottom: 24px;
+    }
+
+    .form__checkbox-text {
+        font-size: 12px;
+        opacity: 0.6;
+    }
+
+    legend {
+        font-size: 18px;
+    }
+
+    legend + .form__input-wrapper {
+        margin-top: 16px!important;
+    }
+
+    fieldset {
+        margin-bottom: 16px;
+        .xs(margin-bottom, 0);
+    }
+
+    .orders__list-item {
+        margin: 40px 0;
+        padding: 20px 0;
+        
+        border-bottom: 1px solid rgba(30, 30, 30, 0.1);
+
+        .xs-block({
+            margin: 24px 0;
+        });
+    }
+
+    .orders__pic {
+        margin-right: 32px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .orders__title {
+        margin-bottom: 8px;
+        font-size: 18px;
+        .md(font-size, 16px);
+        .xs(font-size, 14px);
+    }
+
+    .orders__price {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .orders__size {
+        border: 1px solid rgba(30, 30, 30, 0.6);
+    }
+}

@@ -1,0 +1,120 @@
+//= html/head.html
+
+<body>
+
+	//= html/header.html
+
+	<main class="page catalog">
+
+		<section class="catalog">
+			<div class="container">
+
+				<div id="navigation">
+					<div class="breadcrumbs">
+						<div class="bx-breadcrumb-item"><a href="index.html">Главная</a></div>
+						<div class="separator">/</div>
+						<div class="bx-breadcrumb-item">Каталог</div>
+					</div>
+				</div>
+
+				<h1 class="page__h1 catalog__h1">Каталог</h1>
+
+				<div class="catalog__nav-wrapper">
+					<div class="tnav catalog__nav">
+						<a href="#" class="tnav__item active">Новинки</a>
+						<a href="#" class="tnav__item">Женское</a>
+						<a href="#" class="tnav__item">SALE</a>
+					</div>
+					<div class="catalog__select-wrapper">
+						<label for="order">Порядок:</label>
+						<select class="catalog__select" name="order" id="order">
+							<option selected value="new">сначала новые</option>
+							<option value="ASC">по возрастанию цены</option>
+							<option value="DESC">по убыванию цены</option>
+						</select>
+					</div>
+					<button type="button" class="filter-btn">Фильтр</button>
+				</div>
+
+				<div class="catalog__content">
+
+					<aside class="catalog__aside">
+
+						<form class="filter">
+							<div class="filter__item accordion__item">
+								<div class="accordion__header">Тип товара</div>
+								<div class="accordion__body">
+									<a href="#">Смотреть все</a>
+									<a href="#">Верхняя одежда</a>
+									<a href="#" class="active">Футболки</a>
+									<a href="#">Свитшоты</a>
+									<a href="#">Лонгсливы</a>
+									<a href="#">Комбинезоны</a>
+									<a href="#">Шорты</a>
+									<a href="#">Джинсы</a>
+								</div>
+							</div>
+							<div class="filter__item accordion__item">
+								<div class="accordion__header">Цвет</div>
+								<div class="accordion__body">
+									<a href="#">Смотреть все</a>
+									<a href="#">Серо</a>
+									<a href="#">Буро</a>
+									<a href="#">Малиновый</a>
+								</div>
+							</div>
+							<div class="filter__item accordion__item">
+								<div class="accordion__header">Размер</div>
+								<div class="accordion__body">
+									<a href="#">x</a>
+									<a href="#">xl</a>
+									<a href="#">m</a>
+									<a href="#">l</a>
+								</div>
+							</div>
+							<div class="filter__item accordion__item">
+								<div class="accordion__header">Материал</div>
+								<div class="accordion__body">
+									<a href="#">Смотреть все</a>
+									<a href="#">Хлопок</a>
+									<a href="#">Ситец</a>
+									<a href="#">Мифрил</a>
+								</div>
+							</div>
+							<div class="form__input-wrapper">
+								<input type="checkbox" name="sale" id="sale" class="form__checkbox">
+								<label for="sale" class="form__checkbox-text">Только со скидкой</label>
+							</div>
+							<div class="filter__find">Найдено: <span>15 товаров</span></div>
+						</form>
+
+					</aside>
+
+					<div class="catalog__box">
+						<div class="card__list card__list-2 catalog__list">
+
+							//= html/card.html
+							//= html/card.html
+							//= html/card.html
+							//= html/card.html
+	
+						</div>
+
+						//= html/pagination.html
+
+					</div>
+
+				</div>
+				
+			</div>
+		</section>
+		
+	</main>
+
+
+	//= html/footer.html
+	//= html/popup.html
+	//= html/scripts.html
+
+</body>
+</html>

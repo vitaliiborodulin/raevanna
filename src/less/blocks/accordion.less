@@ -1,5 +1,32 @@
 .accordion {
 
+    &__header {
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            position: absolute;
+            content: '';
+            right: 5px;
+            top: 50%;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-top: -16px;
+            // background-color: @black;
+            background: @black url(../img/arrow-down.svg) no-repeat center;
+            transition: rotate .5s ease;
+        }
+
+        // &.active {
+        //     background-color: @pink;
+        // }
+
+        &.active::after {
+            transform: rotate(180deg);
+        }
+    }
+
     &__body {
         display: none;
     }

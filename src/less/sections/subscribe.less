@@ -1,0 +1,212 @@
+.subscribe {
+    
+    &__content {
+        .row-flex();
+
+        overflow: hidden;
+        height: 512px;
+
+        border-radius: 20px;
+        background: linear-gradient(92.91deg, #F9CDE9 2.42%, #FBFBFB 133%);
+
+        .md-block({
+            height: 270px;
+            background: linear-gradient(92.91deg, #FBFBFB 2.42%, #F9CDE9 133%);
+        });
+
+        .xs-block({
+            height: auto;
+            background: none;
+        });
+    }
+    
+    &__pics-wrap {
+        .col();
+        .size(6);
+        .size-md(5);
+        .size-xs(12);
+
+        position: relative;
+    }
+    
+    &__pics {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        // padding: 0 60px;
+        // padding-left: 60px;
+        // width: 100%;
+        height: 820px;
+
+        // columns: 242px;
+        columns: 13vw;
+        // column-gap: 18px;
+        column-count: 3;
+        // margin-top: -380px;
+        transform: translateY(-50%);
+
+        .md-block({
+            // columns: 120px;
+            columns: 10vw;
+            height: 409px;
+            column-count: 2;
+            column-gap: 10px;
+        });
+
+        .xs-block({
+            position: static;
+            // columns: 115px;
+            // columns: 8vw;
+            height: 165px;
+            column-count: 3;
+            transform: none;
+            column-gap: 1px;
+        });
+    }
+
+    &__pic {
+        position: relative;
+        // width: 242px;
+        // width: 17vw;
+        // width: 100%;
+        height: 400px;
+        // overflow: hidden;
+        margin-bottom: 18px;
+        border-radius: 20px;
+        border: 1px solid @pink-2;
+        overflow: hidden;
+
+        .md-block({
+            // width: 120px;
+            // height: 200px;
+            height: 195px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        });
+
+        .xs-block({
+            // width: 115px;
+            height: 165px;
+        });
+
+        &:nth-child(1),  &:nth-child(5) {
+            height: 310px;
+            .md(height, 154px);
+            .xs(height, 165px);
+        }
+
+        // &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+        //     height: 400px;
+        // }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+
+        .card__badge {
+            top: 12px;
+            right: 12px;
+            background-color: @accent;
+
+            .md-block({
+                font-size: 8px;
+                top: 5px;
+                right: 5px;
+                padding: 5px 3px;
+            });
+        }
+    }
+
+    &__text-wrapper {
+        .col();
+        .size(6);
+        .size-md(7);
+        .size-xs(12);
+
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .md(order, -1);
+
+        .xs-block({
+            margin-bottom: 8px;
+            padding: 30px 20px;
+            border-radius: 20px;
+            background: linear-gradient(92.91deg, #FBFBFB 2.42%, #F9CDE9 133%);
+            text-align: center;
+        });
+    }
+
+    &__text {
+        max-width: 656px;
+    }
+
+    &__title {
+        font-size: 39px;
+        color: @accent;
+        .md(font-size, 30px);
+        .xs(font-size, 24px);
+    }
+
+    &__soc {
+        margin-top: 48px;
+        .md(margin-top, 32px);
+        .xs(margin-top, 24px);
+
+        a {
+            display: inline-block;
+            padding: 15px 55px;
+
+            border-radius: 20px;
+            background-color: @pink-2;
+            transition: background-color 0.5s ease;
+
+            .md-block({
+                padding: 8px 33px;
+            });
+
+            .xs-block({
+                padding: 6px 22px;
+            });
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @accent;
+
+                svg path {
+                    fill: @pink-2;
+                }
+            }
+        }
+
+        a + a {
+            margin-left: 15px;
+        }
+    }
+
+    &__form {
+        margin-top: 48px;
+        .md(margin-top, 28px);
+    }
+
+    .form__input, .form__btn {
+        max-width: 360px;
+        .md(max-width, 300px);
+        .xs(max-width, 100%);
+    }
+
+    &__bottom {
+        margin-top: 16px;
+        font-size: 12px;
+        color: @accent;
+    }
+}

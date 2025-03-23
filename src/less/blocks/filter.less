@@ -1,0 +1,46 @@
+.filter {
+    
+    .accordion__header {
+        padding: 10px 107px 10px 0;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(30, 30, 30, 0.1);
+
+        &:hover {
+            background-color: @pink;
+        }
+
+        &::after {
+            right: 0;
+            background: url(../img/arrow-down-black.svg) no-repeat center;
+        }
+    }
+
+    .accordion__body {
+        border-bottom: 1px solid rgba(30, 30, 30, 0.1);
+
+        a {
+            display: block;
+            padding: 8px 4px;
+            font-size: 18px;
+            transition: all 0.5s ease;
+
+            &:hover,
+            &:active,
+            &:focus,
+            &.active {
+                color: @accent;
+                background-color: @pink;
+            }
+        }
+    }
+
+    .form__input-wrapper {
+        margin-top: 24px;
+    }
+
+    &__find {
+        margin-top: 24px;
+        font-size: 14px;
+        opacity: 0.6;
+    }
+}

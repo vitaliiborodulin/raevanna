@@ -1,0 +1,91 @@
+//= html/head.html
+
+<body>
+
+	//= html/header.html
+
+	<main class="page">
+
+		<section class="account">
+			<div class="container">
+
+				<div class="account__wrapper">
+
+					<div id="navigation">
+						<div class="breadcrumbs">
+							<div class="bx-breadcrumb-item"><a href="index.html">Главная</a></div>
+							<div class="separator">/</div>
+							<div class="bx-breadcrumb-item">Личный кабинет: основная информация</div>
+						</div>
+					</div>
+
+					<h1 class="page__h1 account__h1">Личный кабинет</h1>
+
+					<div class="tnav account__nav">
+						<a href="#" class="tnav__item active">Основная информация</a>
+						<a href="orders.html" class="tnav__item">Мои заказы</a>
+					</div>
+
+					<div class="account__bonus">Количество бонусных баллов: <span>0</span></div>
+
+					<form class="form account__form" action="#">
+						<div class="form__all">
+
+							<div class="form__wrap">
+								<div class="form__line">
+									<label for="name" class="form__label">Имя</label>
+									<input type="text" class="form__input w-100" name="name" id="name" placeholder="Укажите имя" required>
+								</div>
+								<div class="form__line">
+									<label for="surname" class="form__label">Фамилия</label>
+									<input type="text" class="form__input" name="surname" id="surname" placeholder="Укажите фамилию" required>
+								</div>
+								<div class="form__line">
+									<label for="email" class="form__label">E-mail</label>
+									<input type="email" class="form__input" name="email" id="email" placeholder="Укажите E-mail" required>
+								</div>
+								<div class="form__line">
+									<label for="phone" class="form__label">Телефон</label>
+									<input type="tel" class="form__input" name="phone" id="phone" placeholder="Укажите телефон" required>
+								</div>
+								<div class="form__line">
+									<label for="pass" class="form__label">Пароль</label>
+									<input type="password" class="form__input" name="pass" id="pass" placeholder="Пароль" required>
+								</div>
+								<div class="form__line">
+									<input type="text" class="form__input w-100 form__date" name="birth" id="birth" placeholder="Дата рождения">
+									<!-- <div class="form__select-wrapper"> -->
+										<select class="form__select" name="sex" id="sex">
+											<option disabled selected value="">Ваш пол</option>
+											<option value="male">Мужской</option>
+											<option value="female">Женский</option>
+										</select>
+									<!-- </div> -->
+								</div>
+							</div>
+
+							<div class="form__wrap">
+								<input type="text" class="form__input w-100" name="city" id="city" placeholder="Город" required>
+								<input type="text" class="form__input w-100" name="street" id="street" placeholder="Улица" required>
+								<input type="text" class="form__input w-100" name="building" id="building" placeholder="Дом или корпус" required>
+								<input type="text" class="form__input w-100" name="flat" id="flat" placeholder="Квартира" required>
+								<input type="text" class="form__input w-100" name="floor" id="floor" placeholder="Этаж" required>
+								<input type="text" class="form__input w-100" name="intercom" id="intercom" placeholder="Домофон" required>
+							</div>
+						</div>
+						<button class="btn form__btn w-100" type="submit">Сохранить</button>
+					</form>
+
+				</div>
+			</div>
+		</section>
+		
+	</main>
+
+
+	//= html/footer.html
+	//= html/popup.html
+	//= html/scripts.html
+
+</body>
+</html>

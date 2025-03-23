@@ -1,0 +1,33 @@
+.slider {
+
+    &__arrows {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 5px 10px;
+
+        background-color: @white;
+        border-radius: 100px;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: @accent;
+        }
+
+        &:hover svg {
+            path {
+                stroke: @white;
+            }
+        }
+    }
+}
+
+.slick-disabled {
+    opacity: 0.4;
+}

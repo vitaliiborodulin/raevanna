@@ -1,16 +1,40 @@
 .btn {
-    padding: 16px 60px;
+    display: inline-block;
+    padding: 16px 30px;
     font-size: 14px;
     font-weight: 400;
     border-radius: 20px;
     text-align: center;
 
+    color: @white;
+    background-color: @accent;
+
     transition: all 0.5s ease;
     cursor: pointer;
 
     .xs-block({
-        padding: 16px 39px;
+        padding: 16px 20px;
     });
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: @accent;
+        background-color: @pink-2;
+    }
+}
+
+.btn-out {
+    color: @accent;
+    background-color: @pink-2;
+    border: 1px solid @pink-2;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: @white;
+        background-color: @accent;
+    }
 }
 
 .btn-alt {
@@ -26,6 +50,75 @@
     }
 }
 
+.btn-white {
+    color: @black;
+    background-color: @fb;
+}
+
+.btn-wish {
+    flex-shrink: 0;
+    // display: inline-block;
+    width: 50px;
+    height: 50px;
+    // padding: 13px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    font-size: 0;
+    background-color: @pink-2;
+    // background: @pink-2 url(../img/heart.svg) no-repeat center;
+    transition: background-color 0.5s ease;
+    text-align: center;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @pink-2;
+    }
+
+    svg {
+        path {
+            transition: fill 0.5s;
+        }
+    }
+
+    &:hover svg path,
+    &:active svg path,
+    &:focus svg path{
+        fill: @accent;
+    }
+}
+
+.btn-wish-active {
+    svg path:first-child{
+        fill: @accent;
+    }
+
+    &:hover svg path:first-child,
+    &:active svg path:first-child,
+    &:focus svg path:first-child {
+        fill: @pink-2;
+    }
+}
+
+.filter-btn {
+    position: relative;
+    padding-right: 28px;
+
+    &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        background: url(../img/filter.svg) no-repeat center;
+        margin-top: -12px;
+    }
+}
 
 .btn-up {
     display: block;

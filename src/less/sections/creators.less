@@ -1,0 +1,76 @@
+.creators {
+    padding: 70px 0;
+
+    .md-block({
+        padding: 50px 0;
+    });
+
+    .xs-block({
+        padding: 25px 0;
+    });
+
+    &__content {
+        padding-top: 142px;
+        background: url(../img/logo.svg) no-repeat top center/contain;
+
+        .md(padding-top, 62px);
+        .xs(padding-top, 40px);
+    }
+
+    &__box {
+        max-width: 660px;
+        margin-left: auto;
+        margin-right: auto;
+
+        background-color: @fb;
+        border-radius: 20px;
+
+        .md(max-width, 560px);
+        .xs(max-width, 280px);
+    }
+
+    &__pic {
+        border-radius: 20px;
+
+        img {
+            border-radius: inherit;
+        }
+    }
+
+    &__descr {
+        padding: 32px;
+        text-align: center;
+
+        .md(padding, 24px);
+        .xs(padding, 16px);
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        font-size: 40px;
+
+        .md(font-size, 30px);
+        .xs(font-size, 24px);
+    }
+
+    &__btns {
+
+        span {
+            display: inline-block;
+            margin: 0 6px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+
+            .md-block({
+                width: 160px;
+            });
+
+            .xs-block({
+                width: 110px;
+                padding: 8px 20px;
+            });
+        }
+    }
+
+}

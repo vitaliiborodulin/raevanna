@@ -1,6 +1,7 @@
 // USER VARIABLES SECTION
 @white: #fff;
 @bg: #F6F6F6;
+@fb: #FBFBFB;
 @black: #1E1E1E;
 @pink: #FAECF5;
 @pink-2: #F9CDE9;
@@ -53,8 +54,8 @@
     font-family: 'Geologica';
     src: url('../fonts/GEOLOGICA_AUTO-BOLD.eot');
     src: url('../fonts/GEOLOGICA_AUTO-BOLD.eot?#iefix') format('embedded-opentype'),
-        // url('../fonts/GEOLOGICA_AUTO-BOLD.woff2') format('woff2'),
-        // url('../fonts/GEOLOGICA_AUTO-BOLD.woff') format('woff'),
+        url('../fonts/GEOLOGICA_AUTO-BOLD.woff2') format('woff2'),
+        url('../fonts/GEOLOGICA_AUTO-BOLD.woff') format('woff'),
         url('../fonts/GEOLOGICA_AUTO-BOLD.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
@@ -136,6 +137,50 @@ textarea {
 
 input, textarea { 
     field-sizing: content; 
+}
+
+// служебные классы
+
+.d-none {
+    display: none!important;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.accent {
+    color: @accent;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+@media screen and (max-width: 834px) {
+    .d-md-none {
+        display: none!important;
+    }
+
+    .d-md-block{
+        display: block!important;
+    }
+
+    .d-md-flex{
+        display: flex!important;
+    }
+
+    .w-md-100 {
+        width: 100%;
+    }
 }
 
 
