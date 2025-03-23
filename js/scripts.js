@@ -1,22 +1,20 @@
 $(function() {
 
     // burger
-    const burger = $('.header__burger');
+    const burger = $('.burger');
     const menu = $('.header__menu');
-    // const bg = $('.menu__outer');
     
     burger.on('click', function(e) {
         e.preventDefault();
-        burger.toggleClass('header__burger--close');
+        burger.toggleClass('burger-close');
         menu.toggleClass('open').toggle(300);
-        // bg.toggleClass('bg');
         $('html, body').toggleClass('overflow');
     });
     
     $(document).keyup(function(e) {
         if (e.key === "Escape" || e.keyCode === 27) {
             menu.removeClass('open');
-            burger.removeClass('header__burger--close');
+            burger.removeClass('burger-close');
             $('html, body').removeClass('overflow');
         }
     });
@@ -35,12 +33,12 @@ $(function() {
     	
     	if ($(this).hasClass('active')){
     			$(this).removeClass('active');
-    			$(this).find('.sub-menu').removeClass('open').hide();
+    			$(this).find('.sub-menu').removeClass('open').slideUp();
     	} else {
                 menuChildren.removeClass('active');
                 menuChildren.find('.sub-menu').removeClass('open').hide()
     			$(this).addClass('active');
-    			$(this).find('.sub-menu').addClass('open').show();
+    			$(this).find('.sub-menu').addClass('open').slideDown();
     	}
     	// $(this).find('.sub-menu').toggleClass('open').slideToggle();
     });
@@ -334,5 +332,23 @@ $(function() {
             scrollTop: 0
         }, 500);
     })
+    // $('.amount input').on('input change paste', function() {
+    //     $(this).val(this.value.replace(/[^0-9]/, ''));
+    // });
+      
+      $('.amount .nc').on('click', function() {
+        var input = $(this).closest('.amount').find('input');
+        var value = parseInt(input.val()) || 1;
+        if ($(this).hasClass('nc-minus')) {
+          value = value - 1;
+            if(value<=0){
+                value = 1;
+            }
+        }
+        if ($(this).hasClass('nc-plus')) {
+          value = value + 1;
+        }
+        input.val(value + ' шт.').change(); // выводим полученное value в инпут; триггер .change() - на случай, если на изменение этого инпута у вас уже объявлен еще какой-то обработчик
+    });
 
 });

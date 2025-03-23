@@ -26,7 +26,7 @@
 	            <div class="container">
 	                <div class="header__content">
 	
-	                    <button type="button" class="header__burger">
+	                    <button type="button" class="burger">
 	                        <span></span>
 	                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="none">
 	                            <rect width="30" height="24" fill="#F9CDE9" rx="5"/>
@@ -66,6 +66,15 @@
 	                                <li class="menu-item"><a href="about.html">О бренде</a></li>
 	                                <li class="menu-item"><a href="faq.html">Оплата и доставка</a></li>
 	                            </ul>
+	                            <div class="header__more d-none d-md-flex">
+	                                <a href="#" class="header__city">Город</a>
+	                                <a href="tel:+79999999999" target="_blank" class="header__tel">+7 999 999 99 99</a>
+	                            </div>
+	                            <div class="header__soc d-none d-md-flex">
+	                                <a href="#" target="_blank">Telegram</a>
+	                                <a href="#" target="_blank">WhatsApp</a>
+	                                <a href="#" target="_blank">Вконтакте</a>
+	                            </div>
 	                        </nav>
 	                    </div>
 	
@@ -75,7 +84,7 @@
 	
 	                    <div class="header__btns">
 	
-	                        <div class="header__soc">
+	                        <div class="header__soc d-md-none">
 	                            <a href="#" target="_blank">Telegram</a>
 	                            <a href="#" target="_blank">WhatsApp</a>
 	                            <a href="#" target="_blank">Вконтакте</a>
@@ -239,9 +248,64 @@
 	    </div>
 	</footer>
 	<!-- end footer -->
-	<div style="display: none;" class="popup" id="trash">
+	<div style="display: none;" class="popup trash" id="trash">
+	    <div class="popup__title accent">Корзина (<span>3</span>)</div>
+	    <form action="#" class="form popup__form">
+	        <div class="orders__list">
+	            
+	            <div class="orders__list-item">
+	                <div class="orders__pic">
+	                    <img src="img/cat-3.jpg" alt="">
+	                </div>
+	                <div class="orders__text">
+	                    <div class="orders__title">Название товара Название товара Название товара</div>
+	                    <div class="orders__price">6 000 ₽ </div>
+	                    <div class="amount">
+	                        <div class="nc nc-minus">-</div>
+	                        <input type="text" name="number" value="1 шт." disabled>
+	                        <div class="nc nc-plus">+</div>
+	                    </div>
+	                    <a href="#" class="orders__del">Удалить</a>
+	                </div>
+	            </div>
+	            <div class="orders__list-item">
+	                <div class="orders__pic">
+	                    <img src="img/cat-3.jpg" alt="">
+	                </div>
+	                <div class="orders__text">
+	                    <div class="orders__title">Название товара</div>
+	                    <div class="orders__price">6 000 ₽ </div>
+	                    <div class="amount">
+	                        <div class="nc nc-minus">-</div>
+	                        <input type="text" name="number" value="1 шт." disabled>
+	                        <div class="nc nc-plus">+</div>
+	                    </div>
+	                    <a href="#" class="orders__del">Удалить</a>
+	                </div>
+	            </div>
+	            <div class="orders__list-item">
+	                <div class="orders__pic">
+	                    <img src="img/card.jpeg" alt="">
+	                </div>
+	                <div class="orders__text">
+	                    <div class="orders__title">Название товара</div>
+	                    <div class="orders__price">6 000 ₽ </div>
+	                    <div class="amount">
+	                        <div class="nc nc-minus">-</div>
+	                        <input type="text" name="number" value="1 шт." disabled>
+	                        <div class="nc nc-plus">+</div>
+	                    </div>
+	                    <a href="#" class="orders__del">Удалить</a>
+	                </div>
+	            </div>
 	
-	    корзина
+	        </div>
+	        <div class="popup__links">
+	            <div class="trash__total">Итого: <span>2 640 043</span> ₽</div>
+	            <a href="#" class="popup__link" target="_blank">Условия доставки</a>
+	        </div>
+	        <button class="btn form__btn w-100" type="submit">Оформить заказ</button>
+	    </form>
 	</div>
 	
 	<div style="display: none;" class="popup" id="sendback">
