@@ -162,12 +162,12 @@ $(function() {
         slidesToShow: 2,
         slidesToScroll: 2,
         infinite: false,
-        // speed: 500,
+        speed: 4000,
         arrows: false,
         adaptiveHeight: true,
         // nextArrow: $('.feedback .slider__arrow-next'),
         // prevArrow: $('.feedback .slider__arrow-prev'),
-        // cssEase: 'linear',
+        cssEase: 'linear',
         // dots: true,
         // fade: true,
         // autoplay: false,
@@ -183,12 +183,14 @@ $(function() {
     });
     
     // $('.history__slider').on('wheel', (function(e) {
-    //     // e.preventDefault();
+    //     e.preventDefault();
       
     //     if (e.originalEvent.deltaY < 0) {
     //       $(this).slick('slickPrev');
+    
     //     } else {
     //       $(this).slick('slickNext');
+    
     //     }
     // }));
     
