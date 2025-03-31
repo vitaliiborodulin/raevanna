@@ -74,19 +74,22 @@ $('.feedback__slider').slick({
 });
 
 // abouthistory
-$('.history__slider').slick({
+const historySlider = $('.history__slider').slick({
     slidesToShow: 2,
     slidesToScroll: 2,
     infinite: false,
-    // speed: 500,
+    touchMove:false,
+    // speed: 2000,
     arrows: false,
     adaptiveHeight: true,
     // nextArrow: $('.feedback .slider__arrow-next'),
     // prevArrow: $('.feedback .slider__arrow-prev'),
-    // cssEase: 'linear',
-    // dots: true,
+    cssEase: 'linear',
+    dots: false,
     // fade: true,
     // autoplay: false,
+    // swipeToSlide: true,
+    // waitForAnimate: true,
     responsive: [
         {
             breakpoint: 834,
@@ -98,15 +101,16 @@ $('.history__slider').slick({
     ]
 });
 
-// $('.history__slider').on('wheel', (function(e) {
-//     // e.preventDefault();
+$('.history').on('wheel', function(e) {
+    // e.preventDefault();
   
-//     if (e.originalEvent.deltaY < 0) {
-//       $(this).slick('slickPrev');
-//     } else {
-//       $(this).slick('slickNext');
-//     }
-// }));
+    if (e.originalEvent.deltaY > 0) {
+        historySlider.slick('slickNext');
+    } else {
+        historySlider.slick('slickPrev');
+    }
+    // return false;
+});
 
 // product main slider
 $('.product__slider').slick({
