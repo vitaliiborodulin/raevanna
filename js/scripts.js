@@ -162,7 +162,7 @@ $(function() {
         slidesToShow: 2,
         slidesToScroll: 2,
         infinite: false,
-        speed: 4000,
+        speed: 2000,
         arrows: false,
         adaptiveHeight: true,
         // nextArrow: $('.feedback .slider__arrow-next'),
