@@ -9,5 +9,6 @@ $(function() {
     //= components/popup
     //= components/upBtn
     //= components/number
+    //= components/cookie
 
 });

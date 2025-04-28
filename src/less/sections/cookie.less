@@ -1,0 +1,44 @@
+.cookie {
+    position: relative;
+    width: 548px;
+    max-width: 100%;
+    position: fixed;
+    z-index: 20;
+    right: 40px;
+    bottom: 40px;
+
+    padding: 24px;
+    color: @white;
+    background-color: @accent;
+    border-radius: 20px;
+
+    .md-block({
+        right: 10px;
+        bottom: 10px;
+        max-width: 95%;
+    });
+
+    &__header {
+        margin-bottom: 10px;
+        font-size: 18px;
+        padding-left: 25px;
+        background: url(../img/heart-w.svg) no-repeat left center;
+    }
+
+    &__descr {
+        margin-bottom: 20px;
+        font-size: 12px;
+        opacity: 0.8;
+        line-height: 1.25;
+    }
+
+    &__agree {
+
+    }
+
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
