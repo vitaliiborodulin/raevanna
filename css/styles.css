@@ -452,6 +452,11 @@ input[type='submit'] {
   background-color: #F9CDE9;
 }
 
+.btn-o {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 .btn-out {
   color: #E479BD;
   background-color: #F9CDE9;
@@ -2606,6 +2611,40 @@ input[type='submit'] {
   margin: 40px 0;
 }
 
+.cookie {
+  position: relative;
+  width: 548px;
+  max-width: 100%;
+  position: fixed;
+  z-index: 20;
+  right: 40px;
+  bottom: 40px;
+  padding: 24px;
+  color: #fff;
+  background-color: #E479BD;
+  border-radius: 20px;
+}
+
+.cookie__header {
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding-left: 25px;
+  background: url(../img/heart-w.svg) no-repeat left center;
+}
+
+.cookie__descr {
+  margin-bottom: 20px;
+  font-size: 12px;
+  opacity: 0.8;
+  line-height: 1.25;
+}
+
+.cookie__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
 .popup {
   width: 480px;
   max-width: 100%;
@@ -3372,6 +3411,12 @@ input[type='submit'] {
 
   #trash .trash__total {
     font-size: 16px;
+  }
+
+  .cookie {
+    right: 10px;
+    bottom: 10px;
+    max-width: 95%;
   }
 
   .popup .orders__title {
